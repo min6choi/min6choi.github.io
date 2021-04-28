@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&display=swap');
+
+body {
+  transition: all 2500ms ease;
+  transition-property: all;
+  background-color: #F5EDD8;
+  font-family: 'IM Fell DW Pica', serif;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  color: #3D3B32;
+}
+
+/* 효과 넣을지 뺄지 고민중*/
+.marquee {
+  margin: 2rem 0;
+  font-size: 2vw;
+  overflow: hidden;
+}
+
+.marquee--long { 
+  font-size: 1.25vw; 
+}
+
+.marquee span {   
+   display: inline-block;
+   white-space: nowrap;
+   color: rgb(233, 164, 16);
+   width: var(--tw);
+   text-shadow: var(--tw) 0 currentColor, 
+                calc(var(--tw) * 2) 0 currentColor, 
+                calc(var(--tw) * 3) 0 currentColor,
+                calc(var(--tw) * 4) 0 currentColor;
+  
+   will-change: transform;
+   animation: marquee var(--ad) linear infinite;
+   animation-play-state: paused;
+}
+
+.marquee:hover span {
+   animation-play-state: running;
+}
+
+@keyframes marquee {
+   0% { transform: translateX(0); }
+   100% { transform: translateX(-100%); }
+}
+
+.container .intro {
+  font-size: 35px;
+  margin-top: 160px;
+  margin-left: 70px; 
+  margin-right: 70px;
+}
+
+a {
+            color: #f3b046;
+            text-decoration: none;
+}
+
+a:hover,
+a:active {
+            color: #009374;
+}
+
+.menu {
+  padding-top: 10px;
+  padding-right: 10px;
+}
+
+.aboutp {
+  display: block;
+  width: 300px;
+  height: 140px;
+  object-fit: cover;
+}
+
+.project01p {
+  display: block;
+  width: 300px;
+  height: 160px;
+  object-fit: cover;
+}
+
+.project02p {
+  display: block;
+  width: 300px;
+  height: 160px;
+  object-fit: cover;
+}
+
+.project03p {
+  display: block;
+  width: 300px;
+  height: 160px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1200px) {
+
+  .container {
+    color:rgb(233, 164, 16);
+    font-size: 40px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .marquee span {
+      animation: none;
+      text-shadow: none;
+      width: auto;
+      display: block;
+      line-height: 1.5;
+      text-align: center;
+      white-space: normal;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  :checked ~ .marquee span { animation-play-state: running; }
+  label { font: .85rem Courier; margin-left: .5em}
+}
