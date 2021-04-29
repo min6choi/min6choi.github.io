@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer&display=swap');
 
 body {
+  /*사진 사이즈 너무 큼*/
   background-image: url(img/background.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
