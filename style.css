@@ -1,62 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer&display=swap');
 
 body {
+  background-image: url(img/background.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   transition: all 2500ms ease;
   transition-property: all;
-  background-color: #F5EDD8;
-  font-family: 'IM Fell DW Pica', serif;
+  font-family: 'IM Fell Great Primer', serif;
 }
 
 .container {
   display: flex;
   justify-content: space-between;
-  color: #3D3B32;
+  color: #E5C51B;
 }
 
-/* 효과 넣을지 뺄지 고민중*/
-.marquee {
-  margin: 2rem 0;
-  font-size: 2vw;
-  overflow: hidden;
-}
-
-.marquee--long { 
-  font-size: 1.25vw; 
-}
-
-.marquee span {   
-   display: inline-block;
-   white-space: nowrap;
-   color: rgb(233, 164, 16);
-   width: var(--tw);
-   text-shadow: var(--tw) 0 currentColor, 
-                calc(var(--tw) * 2) 0 currentColor, 
-                calc(var(--tw) * 3) 0 currentColor,
-                calc(var(--tw) * 4) 0 currentColor;
-  
-   will-change: transform;
-   animation: marquee var(--ad) linear infinite;
-   animation-play-state: paused;
-}
-
-.marquee:hover span {
-   animation-play-state: running;
-}
-
-@keyframes marquee {
-   0% { transform: translateX(0); }
-   100% { transform: translateX(-100%); }
-}
-
-.container .intro {
-  font-size: 35px;
+/*위치 가운데 정렬필요 */
+.container .name {
+  font-size: 120px;
   margin-top: 160px;
-  margin-left: 70px; 
+  margin-left: 470px; 
   margin-right: 70px;
 }
 
 a {
-            color: #f3b046;
+            color: #4cf346;
             text-decoration: none;
 }
 
@@ -103,42 +72,4 @@ a:active {
   .container {
     color:rgb(233, 164, 16);
     font-size: 40px;
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .marquee span {
-      animation: none;
-      text-shadow: none;
-      width: auto;
-      display: block;
-      line-height: 1.5;
-      text-align: center;
-      white-space: normal;
-    }
-  }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  :checked ~ .marquee span { animation-play-state: running; }
-  label { font: .85rem Courier; margin-left: .5em}
-}
+  }}
