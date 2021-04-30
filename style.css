@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer&display=swap');
 
 body {
-  /*사진 사이즈 너무 큼*/
+  /*사진 사이즈 변경*/
   background-image: url(img/background.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -11,14 +11,14 @@ body {
   font-family: 'IM Fell Great Primer', serif;
 }
 
-.container {
+.title {
   display: flex;
   justify-content: space-between;
   color: #E5C51B;
 }
 
 /*위치 가운데 정렬필요 */
-.container .name {
+.title .name {
   font-size: 120px;
   margin-top: 160px;
   margin-left: 470px; 
@@ -40,33 +40,13 @@ a:active {
   padding-right: 10px;
 }
 
-.aboutp {
+.about {
   display: block;
   width: 300px;
   height: 140px;
   object-fit: cover;
 }
 
-.project01p {
-  display: block;
-  width: 300px;
-  height: 160px;
-  object-fit: cover;
-}
-
-.project02p {
-  display: block;
-  width: 300px;
-  height: 160px;
-  object-fit: cover;
-}
-
-.project03p {
-  display: block;
-  width: 300px;
-  height: 160px;
-  object-fit: cover;
-}
 
 @media screen and (max-width: 1200px) {
 
