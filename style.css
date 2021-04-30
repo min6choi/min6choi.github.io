@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer&display=swap');
 
+:root {
+  /* color */
+  --white-color: #F2ECD6;
+  --black-color: #100A14;
+  --yellow-color: #E5C51B;
+  --blue-color: #009D97;
+}
+
 body {
   /*사진 사이즈 변경*/
   background-image: url(img/background.png);
@@ -14,7 +22,7 @@ body {
 .title {
   display: flex;
   justify-content: space-between;
-  color: #E5C51B;
+  color: var(--white-color);
 }
 
 /*위치 가운데 정렬필요 */
@@ -26,13 +34,13 @@ body {
 }
 
 a {
-            color: #4cf346;
+            color: var(--blue-color);
             text-decoration: none;
 }
 
 a:hover,
 a:active {
-            color: #009374;
+            color: var(--blue-color);
 }
 
 .menu {
@@ -50,7 +58,7 @@ a:active {
 
 @media screen and (max-width: 1200px) {
 
-  .container {
-    color:rgb(233, 164, 16);
+  .title {
+    color: var(--blue-color);
     font-size: 40px;
   }}
