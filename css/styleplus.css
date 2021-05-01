@@ -1,0 +1,33 @@
+
+
+:root {
+    /* color */
+    --white-color: #F2ECD6;
+    --black-color: #100A14;
+    --yellow-color: #E5C51B;
+    --blue-color: #009D97;
+  }
+
+body {
+    background-color: var(--white-color);
+}
+
+/* about page */
+#box-container {
+    display: flex;
+    height: 500px;
+  }
+
+#box1 {
+    background-color: var(--yellow-color);
+    align-self: center;
+    height: 200px;
+    width: 200px;
+}
+
+#box2 {
+    background-color: var(--blue-color);
+    align-self: flex-end;
+    height: 200px;
+    width: 200px;
+  }

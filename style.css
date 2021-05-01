@@ -9,51 +9,32 @@
 }
 
 body {
-  /*사진 사이즈 변경*/
   background-image: url(img/background.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   transition: all 2500ms ease;
   transition-property: all;
-  font-family: 'IM Fell Great Primer', serif;
 }
 
 .title {
   display: flex;
-  justify-content: space-between;
-  color: var(--white-color);
+  flex-direction: column;
+  align-items: center;
 }
 
-/*위치 가운데 정렬필요 */
-.title .name {
-  font-size: 120px;
-  margin-top: 160px;
-  margin-left: 470px; 
-  margin-right: 70px;
+.link {
+  display: flex; 
 }
 
-a {
-            color: var(--blue-color);
-            text-decoration: none;
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-a:hover,
-a:active {
-            color: var(--blue-color);
-}
 
-.menu {
-  padding-top: 10px;
-  padding-right: 10px;
-}
 
-.about {
-  display: block;
-  width: 300px;
-  height: 140px;
-  object-fit: cover;
-}
 
 /* Grainy texture animation by Geoff Graham https://css-tricks.com/snippets/css/animated-grainy-texture/ */
 /*
