@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lateef&display=swap');
 
 :root {
   /* color */
@@ -26,15 +27,6 @@ body {
 .link {
   display: flex; 
 }
-
-.footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-
-
 
 /* Grainy texture animation by Geoff Graham https://css-tricks.com/snippets/css/animated-grainy-texture/ */
 /*

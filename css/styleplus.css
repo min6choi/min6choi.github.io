@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Lateef&display=swap');
 
 :root {
     /* color */
@@ -9,25 +9,65 @@
   }
 
 body {
-    background-color: var(--white-color);
+    background-color: var(--yellow-color);
+}
+
+/*link text color*/
+a:link {
+  color : var(--black-color);
+  text-decoration: none;
+}
+a:visited {
+  color : var(--black-color);
+}
+a:hover {
+  color : var(--white-color);
+}
+a:active {
+  color : var(--white-color);
+}
+
+/* select text color */
+p::selection {
+  background: var(--yellow-color);
+  color: var(--black-color)
 }
 
 /* about page */
-#box-container {
-    display: flex;
-    height: 500px;
-  }
+.top-menu {
+  font-family: 'Lateef', cursive;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 
-#box1 {
-    background-color: var(--yellow-color);
-    align-self: center;
-    height: 200px;
-    width: 200px;
+  height: 20px;
+  padding: 1rem;
+  color: var(--black-color);
+  font-size: 23px;
+  justify-content: space-between;
+  align-items: center;
 }
 
-#box2 {
-    background-color: var(--blue-color);
-    align-self: flex-end;
-    height: 200px;
-    width: 200px;
-  }
+.introduction {
+  padding: 130px;
+  margin-left: 300px;
+  margin-right: 300px;
+  text-align: justify;
+}
+
+.footer {
+  font-family: 'Lateef', cursive;
+  display: flex;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 70px;
+  color: var(--black-color);
+  font-size: 19px;
+  justify-content: center;
+  align-items: center;
+}
