@@ -50,6 +50,44 @@ p::selection {
   align-items: center;
 }
 
+.about {
+  transition: 0.5s all ease 0s;
+  -webkit-transition: 0.5s all ease 0s;
+  -moz-transition: 0.5s all ease 0s;
+  -ms-transition: 0.5s all ease 0s;
+}
+
+.about:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+  transition: 0.5s all ease 0s;
+  -webkit-transition: 0.5s all ease 0s;
+  -moz-transition: 0.5s all ease 0s;
+  -ms-transition: 0.5s all ease 0s;
+}
+
+.project {
+  transition: 0.5s all ease 0s;
+  -webkit-transition: 0.5s all ease 0s;
+  -moz-transition: 0.5s all ease 0s;
+  -ms-transition: 0.5s all ease 0s;
+}
+
+.project:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+  transition: 0.5s all ease 0s;
+  -webkit-transition: 0.5s all ease 0s;
+  -moz-transition: 0.5s all ease 0s;
+  -ms-transition: 0.5s all ease 0s;
+}
+
 .introduction {
   padding: 130px;
   padding-left: 25%;
@@ -60,7 +98,6 @@ p::selection {
 .footer {
   font-family: 'Lateef', cursive;
   display: flex;
-  position: fixed;
   left: 0;
   right: 0;
   bottom: 0;

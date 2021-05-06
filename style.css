@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lateef&display=swap');
 
 :root {
   /* color */
@@ -7,6 +8,21 @@
   --black-color: #100A14;
   --yellow-color: #E5C51B;
   --blue-color: #009D97;
+}
+
+/*link text color*/
+a:link {
+  color : var(--yellow-color);
+  text-decoration: none;
+}
+a:visited {
+  color : var(--yellow-color);
+}
+a:hover {
+  color : var(--white-color);
+}
+a:active {
+  color : var(--white-color);
 }
 
 body {
@@ -20,12 +36,52 @@ body {
 
 .title {
   display: flex;
+  padding: 180px;
+  padding-left: 10%;
+  padding-right: 10%;
   flex-direction: column;
   align-items: center;
 }
 
+.name {
+  font-size: 74px;
+  font-family: 'IM Fell Double Pica', serif;
+  color: var(--yellow-color);
+}
+
+.name-explanation {
+  font-size: 30px;
+  font-family: 'La Belle Aurore', cursive;
+  letter-spacing: 9px;
+  color: var(--white-color);
+  padding-bottom: 20px;
+}
+
 .link {
   display: flex; 
+  font-size: 30px;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'IM Fell Great Primer', serif;
+}
+
+.about {
+  transition: 0.5s all ease 0s;
+  -webkit-transition: 0.5s all ease 0s;
+  -moz-transition: 0.5s all ease 0s;
+  -ms-transition: 0.5s all ease 0s;
+}
+
+.about:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+  transition: 0.5s all ease 0s;
+  -webkit-transition: 0.5s all ease 0s;
+  -moz-transition: 0.5s all ease 0s;
+  -ms-transition: 0.5s all ease 0s;
 }
 
 /* Grainy texture animation by Geoff Graham https://css-tricks.com/snippets/css/animated-grainy-texture/ */
@@ -58,9 +114,8 @@ body::before {
 /* end of grain effect */
 
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 800px) {
 
   .title {
-    color: var(--blue-color);
-    font-size: 40px;
+    font-size: 1.2em;
   }}
