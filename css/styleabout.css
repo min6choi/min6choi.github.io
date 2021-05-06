@@ -52,8 +52,8 @@ p::selection {
 
 .introduction {
   padding: 130px;
-  margin-left: 300px;
-  margin-right: 300px;
+  padding-left: 25%;
+  padding-right: 25%;
   text-align: justify;
 }
 
@@ -70,4 +70,13 @@ p::selection {
   font-size: 19px;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+
+  .introduction {
+    font-size: 1.2em;
+    padding-left: 10%;
+    padding-right: 10%;
+  } 
 }
