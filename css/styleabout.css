@@ -98,11 +98,15 @@ p::selection {
 .footer {
   font-family: 'Lateef', cursive;
   display: flex;
+  background-color: var(--white-color);
+  position: fixed;
+  border-top: 1px solid var(--black-color); 
   left: 0;
   right: 0;
   bottom: 0;
 
-  height: 70px;
+  height: 30px;
+  padding: 1rem;
   color: var(--black-color);
   font-size: 19px;
   justify-content: center;
