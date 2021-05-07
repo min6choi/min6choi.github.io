@@ -2,7 +2,7 @@
 
 :root {
     /* color */
-    --white-color: #F2ECD6;
+    --white-color: #FBF7EB;/*#F2ECD6;*/
     --black-color: #100A14;
     --yellow-color: #E5C51B;
     --blue-color: #009D97;
@@ -98,7 +98,6 @@ p::selection {
 .footer {
   font-family: 'Lateef', cursive;
   display: flex;
-  background-color: var(--white-color);
   position: fixed;
   border-top: 1px solid var(--black-color); 
   left: 0;

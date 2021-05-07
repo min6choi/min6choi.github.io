@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lateef&display=swap');
 
 :root {
     /* need change white and blue*/
     /* color */
-    --white-color: #F2ECD6;
+    --white-color: #FBF7EB;/*#F2ECD6;*/
     --black-color: #100A14;
     --yellow-color: #E5C51B;
     --blue-color: #009D97;
@@ -17,10 +18,10 @@ a:link {
     color : var(--black-color);
   }
   a:hover {
-    color : var(--white-color);
+    color : var(--yellow-color);
   }
   a:active {
-    color : var(--white-color);
+    color : var(--yellow-color);
 }
 
 body {
@@ -58,7 +59,7 @@ body {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-	padding: 17vh 0 25vh;
+	padding: 13vh 0 25vh;
 	--marquee-width: 100vw;
 	--offset: 20vw;
 	--move-initial: calc(-25% + var(--offset));
@@ -163,6 +164,24 @@ body {
 .marquee span {
 	font-style: italic;
 }
+
+.footer {
+	font-family: 'Lateef', cursive;
+	display: flex;
+	position: fixed;
+	border-top: 1px solid var(--black-color); 
+	left: 0;
+	right: 0;
+	bottom: 0;
+  
+	height: 30px;
+	padding: 1rem;
+	color: var(--black-color);
+	font-size: 19px;
+	justify-content: center;
+	align-items: center;
+  }
+
 
 @keyframes marquee {
 	0% {
