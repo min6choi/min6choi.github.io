@@ -38,7 +38,7 @@ p::selection {
 
 /* about page */
 .top-menu {
-  font-family: 'IM Fell Great Primer', serif;
+  font-family: 'IM Fell English SC', serif;
   display: flex;
   position: fixed;
   top: 0;
@@ -94,23 +94,22 @@ p::selection {
 
 .introduction {
   display: flex;
-  padding: 80px;
-  flex-direction: column;
+  padding: 100px;
   align-items: center;
   justify-content: center;
 }
 
 .profile-image {
   align-items: center;
-  width: 35%;
-  padding-bottom: 2%;
+  width: 30%;
+  padding-left: 10%;
 }
 
 .profile-text {
   font-family: 'IM Fell Great Primer', serif;
   text-align: justify;
-  padding-left: 30%;
-  padding-right: 30%;
+  padding-left: 5%;
+  padding-right: 10%;
   line-height: 20px;
 }
 
@@ -137,6 +136,14 @@ p::selection {
 
 @media screen and (max-width: 800px) {
 
+  .introduction {
+    display: flex;
+    padding: 80px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
   .profile-image {
     width: 100%;
     padding-left: 0.1%;
