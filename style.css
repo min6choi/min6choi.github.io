@@ -88,7 +88,7 @@ body::before {
 
 .title {
   display: flex;
-  padding: 180px;
+  padding: 200px;
   padding-left: 10%;
   padding-right: 10%;
   flex-direction: column;
@@ -102,9 +102,9 @@ body::before {
 }
 
 .name-explanation {
-  font-size: 30px;
+  font-size: 25px;
   font-family: 'La Belle Aurore', cursive;
-  letter-spacing: 9px;
+  letter-spacing: 3px;
   color: var(--white-color);
   padding-bottom: 20px;
 }
@@ -158,9 +158,14 @@ body::before {
 }
 
 @media screen and (max-width: 800px) {
+  .title {
+    padding: 80px;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 
   .name {
-    font-size: 500%;
+    font-size: 600%;
   }
 
   .name-explanation {
@@ -168,6 +173,8 @@ body::before {
   }
 
   .link {
-    font-size: 200%;
+    font-size: 300%;
+    align-items: center;
+    font-family: 'IM Fell Great Primer', serif;
   }
 }
