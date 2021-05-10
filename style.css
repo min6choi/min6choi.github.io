@@ -159,9 +159,12 @@ body::before {
 
 @media screen and (max-width: 800px) {
   .title {
-    padding: 80px;
-    padding-left: 5%;
-    padding-right: 5%;
+  display: flex;
+  padding: 100px;
+  padding-left: 5%;
+  padding-right: 5%;
+  flex-direction: column;
+  align-items: center;
   }
 
   .name {
@@ -169,7 +172,7 @@ body::before {
   }
 
   .name-explanation {
-    font-size: 200%;
+    font-size: 180%;
   }
 
   .link {
