@@ -185,3 +185,29 @@ body::before {
     font-family: 'IM Fell Great Primer', serif;
   }
 }
+
+@media screen and (max-height: 400px) {
+  .title {
+  display: flex;
+  padding: 50px;
+  padding-left: 1%;
+  padding-right: 1%;
+  flex-direction: column;
+  align-items: center;
+  }
+
+  .name {
+    color: var(--blue-color);
+    font-size: 6.5rem;
+  }
+
+  .name-explanation {
+    font-size: 2rem;
+  }
+
+  .link {
+    font-size: 3.5rem;
+    align-items: center;
+    font-family: 'IM Fell Great Primer', serif;
+  }
+}
