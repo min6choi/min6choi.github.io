@@ -176,15 +176,16 @@ body::before {
         }
       
         .name {
-          font-size: 500px;;
+          color: var(--blue-color);
+          font-size: 300px;
         }
       
         .name-explanation {
-          font-size: 600px;
+          font-size: 200px;
         }
       
         .link {
-          font-size: 350px;
+          font-size: 250px;
           align-items: center;
           font-family: 'IM Fell Great Primer', serif;
         }
