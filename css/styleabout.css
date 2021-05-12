@@ -45,11 +45,14 @@ p::selection {
   left: 0;
   right: 0;
 
-  height: 20px;
+  height: 10px;
   padding: 1rem;
   background-color: #E5C51B;
   color: var(--black-color);
   font-size: 23px;
+  /*
+  border-bottom: #100A14 solid 1px;
+  */
   justify-content: space-between;
   align-items: center;
 }
@@ -125,7 +128,7 @@ p::selection {
   right: 0;
   bottom: 0;
 
-  height: 15px;
+  height: 10px;
   padding: 1rem;
   background-color: var(--yellow-color);
   color: var(--black-color);
@@ -134,11 +137,15 @@ p::selection {
   align-items: center;
 }
 
-@media screen and (max-width: 800px) {
+@media only screen 
+    and (device-width: 375px) 
+    and (device-height: 812px) 
+    and (-webkit-device-pixel-ratio: 3) {
 
   .introduction {
     display: flex;
-    padding: 80px;
+    padding: 25px;
+    margin-top: 35px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
