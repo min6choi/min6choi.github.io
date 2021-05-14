@@ -10,6 +10,11 @@
     --blue-color: #006574;
   }
 
+::selection {
+  background: var(--blue-color);
+  color: var(--white-color);
+}
+
 body {
     background-color: var(--yellow-color);
 }
@@ -121,9 +126,6 @@ p::selection {
   font-family: 'IM Fell English SC', serif;
   display: flex;
   position: fixed;
-  /*
-  border-top: 1px solid var(--black-color); 
-  */
   left: 0;
   right: 0;
   bottom: 0;

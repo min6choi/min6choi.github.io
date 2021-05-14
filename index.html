@@ -2,13 +2,22 @@
 <head>
     <meta charset="UTF-8">
     <link rel="shortcut icon" type="image/x-icon" href="img/main.png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $( document ).ready( function() {
+          $( '.title-1' ).animate( {
+            opacity: '1'
+          }, 900 );
+        } );
+      </script>
     <title>Minsik Choi</title>
     <link href="style.css" rel="stylesheet" >
 </head>
 <body>
-    <img src='img/index.gif' id='background'/>    
+     
 <!-- introduction -->
-    <div class='title'>
+    <div class="title title-1"> <!-- 1 is for jquery-->
+        <img src='img/index.gif' id='background'/>
         <span class="name">
             Minsik Choi
         </span>
