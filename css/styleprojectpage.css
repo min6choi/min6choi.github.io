@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Lateef&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
+
+
+:root {
+    /* need change white and blue*/
+    /* color */
+    --white-color: #F6F5F0;/*#F2ECD6;*/
+    --black-color: #100A14;
+    --yellow-color: #E5C51B;
+    --blue-color: #006574;
+}
+
+/*link text color*/
+a:link {
+    color : var(--black-color);
+    text-decoration: none;
+  }
+  a:visited {
+    color : var(--black-color);
+  }
+  a:hover {
+    color : var(--blue-color);
+  }
+  a:active {
+    color : var(--blue-color);
+  }
+  
+  /* select text color */
+  p::selection {
+    background: var(--yellow-color);
+    color: var(--black-color)
+}
+
+body {
+    margin: 0;
+    background-color: var(--white-color);
+    --color-link: var(--blue-color);
+    --color-link-hover: var(--blue-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    display: flex;
+    padding: 100px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.top-menu {
+    font-family: 'IM Fell English SC', serif;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 20px;
+    padding: 1rem;
+    color: var(--black-color);
+    font-size: 23px;
+    /*
+    border-bottom: #100A14 solid 1px;
+    */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about {
+    transition: 0.5s all ease 0s;
+    -webkit-transition: 0.5s all ease 0s;
+    -moz-transition: 0.5s all ease 0s;
+    -ms-transition: 0.5s all ease 0s;
+}
+
+.about:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 0.5s all ease 0s;
+    -webkit-transition: 0.5s all ease 0s;
+    -moz-transition: 0.5s all ease 0s;
+    -ms-transition: 0.5s all ease 0s;
+}
+
+.project {
+    transition: 0.5s all ease 0s;
+    -webkit-transition: 0.5s all ease 0s;
+    -moz-transition: 0.5s all ease 0s;
+    -ms-transition: 0.5s all ease 0s;
+}
+
+.project:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 0.5s all ease 0s;
+    -webkit-transition: 0.5s all ease 0s;
+    -moz-transition: 0.5s all ease 0s;
+    -ms-transition: 0.5s all ease 0s;
+}
+
+.footer {
+    font-family: 'IM Fell English SC', serif;
+    display: flex;
+    position: fixed;
+    /*
+    border-top: 1px solid var(--black-color); 
+    */
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 10px;
+    padding: 1rem;
+    background-color: var(--white-color);
+    color: var(--black-color);
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+
