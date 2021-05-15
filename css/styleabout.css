@@ -11,12 +11,12 @@
   }
 
 ::selection {
-  background: var(--blue-color);
+  background: var(--yellow-color);
   color: var(--white-color);
 }
 
 body {
-    background-color: var(--yellow-color);
+  background-color: var(--yellow-color);
 }
 
 /*link text color*/
