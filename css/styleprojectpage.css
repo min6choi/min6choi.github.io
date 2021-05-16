@@ -28,13 +28,13 @@ a:link {
   }
   
   /* select text color */
-  p::selection {
-    background: var(--yellow-color);
-    color: var(--black-color)
-}
+  ::selection {
+    background: var(--blue-color);
+    color: var(--white-color);
+  }
 
 body {
-    margin: 0;
+    margin: 0 auto;
     background-color: var(--white-color);
     --color-link: var(--blue-color);
     --color-link-hover: var(--blue-color);
@@ -105,15 +105,18 @@ body {
 }
 
 .content {
-    margin: 5px;
+    padding: 10px;
+    padding-left: 7%;
+    padding-right: 7%;
     font-size: 20px;
     font-family: 'IM Fell Great Primer', serif;
 
 }
 
 .content-1 {
-    margin: 10px;
     flex-direction: column;
+    border-bottom: solid 3px var(--black-color);
+    margin-bottom: 5%;
 }
 
 .title {
@@ -137,15 +140,15 @@ body {
 
 .project-member {
     font-size: 1rem;
+    width: 70%;
 }
 
 .eng-content {
+    padding-left: 5%;
+    padding-right: 5%;
 
 }
 
-.content-3 {
-
-}
 
 .footer {
     font-family: 'IM Fell English SC', serif;
