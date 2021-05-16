@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lateef&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
+
 
 :root {
     /* need change white and blue*/
@@ -96,6 +96,7 @@ body {
     -ms-transition: 0.5s all ease 0s;
 }
 
+
 .menu {
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
@@ -190,6 +191,7 @@ body {
 .marquee span {
 	font-style: italic;
 }
+
 
 .footer {
     font-family: 'IM Fell English SC', serif;

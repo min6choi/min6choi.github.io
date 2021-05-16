@@ -104,6 +104,49 @@ body {
     -ms-transition: 0.5s all ease 0s;
 }
 
+.content {
+    margin: 5px;
+    font-size: 20px;
+    font-family: 'IM Fell Great Primer', serif;
+
+}
+
+.content-1 {
+    margin: 10px;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 3rem;
+}
+
+.tag {
+    font-size: 1rem;
+    margin: 10px;
+}
+
+.link {
+    margin: 20px;
+
+}
+
+.content-2 {
+    text-align: justify;
+    display: flex;
+}
+
+.project-member {
+    font-size: 1rem;
+}
+
+.eng-content {
+
+}
+
+.content-3 {
+
+}
+
 .footer {
     font-family: 'IM Fell English SC', serif;
     display: flex;
