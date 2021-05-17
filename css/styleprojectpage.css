@@ -189,19 +189,23 @@ body {
     align-items: center;
 }
 
-@media screen and (max-width: 767px) and (max-width: 1008px) {
+@media screen and (max-width: 767px){
+    .name {
+        font-size: 17px;
+    }
+    
     .content {
         margin: 1%;
         font-family: 'IM Fell Great Primer', serif;
-        border : solid 1.3px var(--black-color);
+        border : none;
     }
 
     .content-1 {
         flex-direction: column;
-        border-bottom: solid 1.3px var(--black-color);
         margin-top: 5%;
         margin-bottom: 3%;
         padding-left: 1%;
+        border : none;
     }
 
     .title {
@@ -263,16 +267,20 @@ body {
       and (device-width: 375px) 
       and (device-height: 812px) 
       and (-webkit-device-pixel-ratio: 3) {
+        
+        .name {
+            font-size: 15px;
+        }
 
         .content {
             margin: 1%;
             font-family: 'IM Fell Great Primer', serif;
-            border : solid 1px var(--black-color);
+            border : none;
         }
 
         .content-1 {
             flex-direction: column;
-            border-bottom: solid 1px var(--black-color);
+            border-bottom: none;
             margin-top: 5%;
             margin-bottom: 3%;
             padding-left: 1%;

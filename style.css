@@ -141,6 +141,13 @@ a:active {
   align-items: center;
 }
 
+@media screen and (max-width: 767px) {
+/*시간 남으면 하기*/
+
+
+}
+
+
 /* this is for only iphone12 mini*/
 @media only screen 
       and (device-width: 375px) 
@@ -220,6 +227,10 @@ a:active {
           -webkit-transition: 0.5s all ease 0s;
           -moz-transition: 0.5s all ease 0s;
           -ms-transition: 0.5s all ease 0s;
+        }
+
+        .footer {
+          font-size: 35px;
         }
     }
 

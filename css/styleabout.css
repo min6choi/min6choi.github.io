@@ -97,6 +97,10 @@ a:active {
   -ms-transition: 0.5s all ease 0s;
 }
 
+.name {
+
+}
+
 .introduction {
   display: flex;
   flex-direction: column;
@@ -115,6 +119,15 @@ a:active {
   line-height: 20px;
   margin: 25px;
   width: 500px;
+}
+
+span { 
+  text-decoration: var(--white-color) wavy 1.5px underline; 
+}
+
+.context-text {
+  width: 500px;
+
 }
 
 
@@ -136,6 +149,10 @@ a:active {
 }
 
 @media screen and (max-width: 767px) {
+  .name {
+    font-size: 17px;
+  }
+
   .introduction {
     display: flex;
     flex-direction: column;
@@ -155,6 +172,11 @@ a:active {
     margin: 20px;
     width: 300px;
   }
+
+  .context-text {
+    width: 300px;
+  
+  }
 }
 
 
@@ -165,10 +187,14 @@ a:active {
     and (device-height: 812px) 
     and (-webkit-device-pixel-ratio: 3) {
 
+  .name {
+    font-size: 15px;
+  }
+
   .introduction {
     display: flex;
     padding: 5px;
-    margin-top: 90px;
+    margin-top: 95px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -176,12 +202,16 @@ a:active {
   
   .profile-image {
     width: 93%;
-    padding-bottom: 5%;
+    padding-bottom: 3%;
   }
   
   .profile-text {
     font-size: 1em;
-    padding-left: 0.1em;
-    padding-right: 0.1em;
+    width: 93%;
   } 
+
+  .context-text {
+    width: 93%;
+  
+  }
 }

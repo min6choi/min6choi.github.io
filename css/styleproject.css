@@ -33,7 +33,7 @@ body {
 	--color-bg: var(--white-color);
 	--color-link: var(--blue-color);
 	--color-link-hover: var(--blue-color);
-	color: #006574;
+	color: var(--blue-color);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	font-family: sofia-pro, sans-serif;
@@ -51,9 +51,6 @@ body {
     padding: 1rem;
     color: var(--black-color);
     font-size: 23px;
-    /*
-    border-bottom: #100A14 solid 1px;
-    */
     justify-content: space-between;
     align-items: center;
 }
@@ -103,7 +100,7 @@ body {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-	padding: 13vh 0 25vh;
+	padding: 17vh 0 25vh;
 	--marquee-width: 100vw;
 	--offset: 20vw;
 	--move-initial: calc(-25% + var(--offset));
@@ -155,7 +152,9 @@ body {
 	width: var(--marquee-width);
 	overflow: hidden;
 	pointer-events: none;
-	mix-blend-mode: color-burn;
+	/*
+	mix-blend-mode: ;
+	*/
 }
 
 .marquee__inner {
@@ -197,9 +196,6 @@ body {
     font-family: 'IM Fell English SC', serif;
     display: flex;
     position: fixed;
-    /*
-    border-top: 1px solid var(--black-color); 
-    */
     left: 0;
     right: 0;
     bottom: 0;
