@@ -100,22 +100,21 @@ a:active {
 .introduction {
   display: flex;
   flex-direction: column;
-  padding: 100px;
+  padding: 90px;
   align-items: center;
   justify-content: center;
 }
 
 .profile-image {
-  width: 40%;
+  width: 500px;
 }
 
 .profile-text {
   font-family: 'IM Fell Great Primer', serif;
   text-align: justify;
   line-height: 20px;
-  margin: 3%;
-  padding-left: 27%;
-  padding-right: 27%;
+  margin: 25px;
+  width: 500px;
 }
 
 
@@ -136,7 +135,7 @@ a:active {
   align-items: center;
 }
 
-@media screen and (max-width: 767px) and (max-width: 1008px){
+@media screen and (max-width: 767px) {
   .introduction {
     display: flex;
     flex-direction: column;
@@ -146,18 +145,19 @@ a:active {
   }
   
   .profile-image {
-    width: 88%;
+    width: 300px;
   }
   
   .profile-text {
     font-family: 'IM Fell Great Primer', serif;
     text-align: justify;
     line-height: 20px;
-    margin: 3%;
-    padding-left: 1em;
-    padding-right: 1em;
+    margin: 20px;
+    width: 300px;
   }
 }
+
+
 
 /* this is for only iphone12 mini*/
 @media only screen 
