@@ -29,8 +29,8 @@ a:link {
   
   /* select text color */
   ::selection {
-    background: var(--blue-color);
-    color: var(--white-color);
+    background: var(--white-color);
+    color: var(--blue-color);
   }
 
 body {
@@ -108,13 +108,12 @@ body {
     margin: 2%;
     font-size: 20px;
     font-family: 'IM Fell Great Primer', serif;
-    border : solid 3px var(--black-color);
-
+    border : solid 1.5px var(--black-color);
 }
 
 .content-1 {
     flex-direction: column;
-    border-bottom: solid 3px var(--black-color);
+    border-bottom: solid 1.5px var(--black-color);
     margin-top: 5%;
     margin-bottom: 3%;
     padding-left: 1%;
@@ -137,10 +136,22 @@ body {
 .content-2 {
     text-align: justify;
     display: flex;
+    flex-direction: row-reverse;
     margin: 1%;
 }
 
-.content-2-1 {
+.content-2-photo {
+    margin: 1%;
+}
+
+
+#project-gif {
+    
+    width: 45vw;
+
+}
+
+.content-2-content {
     margin: 0.5%;
     padding-right: 3%;
 }
@@ -154,16 +165,7 @@ body {
     font-size: 1rem;
 }
 
-.content-2-2 {
-    margin: 1%;
-}
 
-
-#project-gif {
-    
-    width: 45vw;
-
-}
 
 
 
@@ -186,5 +188,155 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+@media screen and (max-width: 767px) and (max-width: 1008px) {
+    .content {
+        margin: 1%;
+        font-family: 'IM Fell Great Primer', serif;
+        border : solid 1.3px var(--black-color);
+    }
+
+    .content-1 {
+        flex-direction: column;
+        border-bottom: solid 1.3px var(--black-color);
+        margin-top: 5%;
+        margin-bottom: 3%;
+        padding-left: 1%;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+    
+    .tag {
+        font-size: 0.9rem;
+        margin: 5px;
+    }
+
+    .tag {
+        font-size: 1rem;
+        margin: 5px;
+    }
+    
+    .link {
+        margin: 10px;
+    
+    }
+    
+    .content-2 {
+        text-align: justify;
+        display: flex;
+        flex-direction: column;
+        margin: 1%;
+    }
+
+    .content-2-photo {
+        margin: 1%;
+    }
+    
+    
+    #project-gif {
+       width: 84vw;
+    
+    }
+    
+    .content-2-content {
+        margin: 0.5%;
+        padding-right: 3%;
+    }
+    
+    .project-member {
+        font-size: 1rem;
+        padding-bottom: 5%;
+    }
+    
+    .text-content {
+        font-size: 1rem;
+    }
+    
+
+
+    }
+
+/* this is for only iphone12 mini*/
+@media only screen 
+      and (device-width: 375px) 
+      and (device-height: 812px) 
+      and (-webkit-device-pixel-ratio: 3) {
+
+        .content {
+            margin: 1%;
+            font-family: 'IM Fell Great Primer', serif;
+            border : solid 1px var(--black-color);
+        }
+
+        .content-1 {
+            flex-direction: column;
+            border-bottom: solid 1px var(--black-color);
+            margin-top: 5%;
+            margin-bottom: 3%;
+            padding-left: 1%;
+        }
+
+        .content-2 {
+            text-align: justify;
+            display: flex;
+            flex-direction: column;
+            margin: 1%;
+        }
+
+        .title {
+            font-size: 1.5rem;
+        }
+        
+        .tag {
+            font-size: 0.9rem;
+            margin: 5px;
+        }
+
+        .tag {
+            font-size: 1rem;
+            margin: 5px;
+        }
+        
+        .link {
+            margin: 10px;
+        
+        }
+        
+        .content-2 {
+            text-align: justify;
+            display: flex;
+            flex-direction: column;
+            margin: 1%;
+        }
+
+        .content-2-photo {
+            margin: 1%;
+        }
+        
+        
+        #project-gif {
+           width: 84vw;
+        
+        }
+        
+        .content-2-content {
+            margin: 0.5%;
+            padding-right: 3%;
+        }
+        
+        .project-member {
+            font-size: 1rem;
+            padding-bottom: 5%;
+        }
+        
+        .text-content {
+            font-size: 1rem;
+        }
+        
+
+        
+      }
 
 
