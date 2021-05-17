@@ -105,18 +105,19 @@ body {
 }
 
 .content {
-    padding: 10px;
-    padding-left: 7%;
-    padding-right: 7%;
+    margin: 2%;
     font-size: 20px;
     font-family: 'IM Fell Great Primer', serif;
+    border : solid 3px var(--black-color);
 
 }
 
 .content-1 {
     flex-direction: column;
     border-bottom: solid 3px var(--black-color);
-    margin-bottom: 5%;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    padding-left: 1%;
 }
 
 .title {
@@ -125,29 +126,45 @@ body {
 
 .tag {
     font-size: 1rem;
-    margin: 10px;
+    margin: 5px;
 }
 
 .link {
-    margin: 20px;
+    margin: 10px;
 
 }
 
 .content-2 {
     text-align: justify;
     display: flex;
+    margin: 1%;
+}
+
+.content-2-1 {
+    margin: 0.5%;
+    padding-right: 3%;
 }
 
 .project-member {
     font-size: 1rem;
-    width: 70%;
+    padding-bottom: 5%;
 }
 
-.eng-content {
-    padding-left: 5%;
-    padding-right: 5%;
+.text-content {
+    font-size: 1rem;
+}
+
+.content-2-2 {
+    margin: 1%;
+}
+
+
+#project-gif {
+    
+    width: 45vw;
 
 }
+
 
 
 .footer {

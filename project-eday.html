@@ -26,39 +26,37 @@
           <div class="link">👉🏻</div>
       </div>
       <div class="content-2">
-        <div class="project-member">
-          <div class="project-mamber-title">
-            project member
-          </div>
-          <div class="project-member-name">
-            Darae Jang<br/>Minsik Choi
-          </div>
-        </div>
-          <div class="eng-content">
-              <div class="eng-1"><strong>1. How the nodes are connected?</strong><br/></div>
-              <div class ="eng-content1">&nbsp;&nbsp;How can we explain that two words are related to each other? For an explanation about a word which has a connection with another word, we need a specific standard. So in this project, we have divided every sentences in the book which is “The Ethics of Information” by a specific interval for recognition of word association. This specific interval is called, ‘window’.
-              <br/><br/> 
-              I love cats.<br/> 
-              Cats are the most adorable creatures in the world.<br/> 
-              But cats mostly don't like me.<br/> 
-              <br/> 
-              Here are three example sentences. First, it is divided into three sentences according to the period(.). When we consider that there are three windows, in the first sentence, which is “I love cats” has three words is related each other. The second sentence is divided into three words. For instance, cat is the / is the most / the most adorable / most adorable creatures e.t.c. As a result, three words in a row in this way are considered to be related to each other. 
-              <br/></br/></div>
-          
-              <div class="eng-2"><strong>2. What does the size of nodes mean?</strong><br/></div>
-              <div class ="eng-content2">&nbsp;&nbsp;So, are all the words connected with each other eventually? Yes, right. However, it may be different because of the number of times ‘love’ and ‘cats’ are connected, and the number of times ‘love’ and ‘I’ are connected. Therefore, we used a specific process which is ‘textrank’ to calculate the importance and degree of connection for each word using the number of times. The word which appears the most will be the most important and the two words will be more connected if the frequency of occurrence of two specific words together is high. When managing words, the frequency of their appearance is important. Therefore, the more it appears, the larger the node size, and vice versa. Also, the 100 words selected in the graph were also selected from 100 words with high importance according to their frequency of appearance.
-              <br/><br/></div>
-          
-              <div class="eng-3"><strong>3. What does the color and position of the node mean?</strong><br/></div>
-              <div class ="eng-content3">&nbsp;&nbsp;Now we have found a word which is used for nodes, a line for connecting each node, and the size of the nodes. We drew enough graphs with these materials, but we wanted more effective and useful visual information. So we decided to add colour to make the graph more understandable. At this point, the colour tells which community the word belongs to. In this project, we used Louvain algorithms to print out which word were more 'close' to other word and as a result we divided the words into several communities. In addition, the classification by this community placed each word closer to the center of the mindmap, which corresponds to the important word in the text book. For this work, we used the textrank score.
-              <br/><br/></div>
-          
-              <div class="eng-4"><strong>4. When you click a node...</strong><br/></div>
-              <div class ="eng-content4">&nbsp;&nbsp;When we look at the words written on the node at a glance, We don't know in what context and for what reason this word was used. To help with this difficulty, when clicking on a node, a modal window will appear with a few lines of text. This selects the sentence in which the word appears first and shows the sentences before and after.
-              Of course, people may not know enough information about words simply by checking that part, but at least we think it will be a help to know " The Ethics of Information ". 
+        <div class="content-2-1">
+    
+            <div class="text-content">
+                <div class="text-title"><strong>1. How the nodes are connected?</strong><br/></div>
+                <div class ="text-content">&nbsp;&nbsp;How can we explain that two words are related to each other? For an explanation about a word which has a connection with another word, we need a specific standard. So in this project, we have divided every sentences in the book which is “The Ethics of Information” by a specific interval for recognition of word association. This specific interval is called, ‘window’.
+                <br/><br/> 
+                I love cats.<br/> 
+                Cats are the most adorable creatures in the world.<br/> 
+                But cats mostly don't like me.<br/> 
+                <br/> 
+                Here are three example sentences. First, it is divided into three sentences according to the period(.). When we consider that there are three windows, in the first sentence, which is “I love cats” has three words is related each other. The second sentence is divided into three words. For instance, cat is the / is the most / the most adorable / most adorable creatures e.t.c. As a result, three words in a row in this way are considered to be related to each other. 
+                <br/></br/>
+            
+                2. What does the size of nodes mean?</strong><br/>
+                &nbsp;&nbsp;So, are all the words connected with each other eventually? Yes, right. However, it may be different because of the number of times ‘love’ and ‘cats’ are connected, and the number of times ‘love’ and ‘I’ are connected. Therefore, we used a specific process which is ‘textrank’ to calculate the importance and degree of connection for each word using the number of times. The word which appears the most will be the most important and the two words will be more connected if the frequency of occurrence of two specific words together is high. When managing words, the frequency of their appearance is important. Therefore, the more it appears, the larger the node size, and vice versa. Also, the 100 words selected in the graph were also selected from 100 words with high importance according to their frequency of appearance.
+                <br/><br/></div>
+            </div>
+            <div class="project-member">
+              <div class="project-mamber-title">
+                project member
               </div>
+              <div class="project-member-name">
+                Darae Jang<br/>Minsik Choi
+              </div>
+            </div>
           </div>
-       </div>
+          <div class="content-2-2">
+            <div class="photo">
+              <img src='img/index.gif' id='project-gif'/>
+            </div>
+          </div>
       </div>
   </div>
 
