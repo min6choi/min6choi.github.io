@@ -7,7 +7,7 @@
     --white-color: #F6F5F0;
     --black-color: #100A14;
     --yellow-color: #E5C51B;
-    --blue-color: #006574;
+    --blue-color: #309C98;
   }
 
 
@@ -116,13 +116,13 @@ a:active {
 .profile-text {
   font-family: 'IM Fell Great Primer', serif;
   text-align: justify;
-  line-height: 20px;
+  line-height: 25px;
   margin: 25px;
   width: 500px;
 }
 
 span { 
-  text-decoration: var(--yellow-color) wavy 1.5px underline; 
+  text-decoration: var(--blue-color) wavy 2px underline; 
 }
 
 .context-text {

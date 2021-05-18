@@ -9,7 +9,7 @@
     --white-color: #F6F5F0;/*#F2ECD6;*/
     --black-color: #100A14;
     --yellow-color: #E5C51B;
-    --blue-color: #006574;
+    --blue-color: #44999A;
 }
 
 /*link text color*/
@@ -109,6 +109,10 @@ body {
     font-size: 20px;
     font-family: 'IM Fell Great Primer', serif;
     border : solid 1.5px var(--black-color);
+}
+
+span {
+    background: var(--blue-color);
 }
 
 .content-1 {
