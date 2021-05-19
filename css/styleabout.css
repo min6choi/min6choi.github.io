@@ -5,10 +5,10 @@
 :root {
     /* color */
     --white-color: #F6F5F0;
-    --black-color: #100A14;
-    --yellow-color: #E5C51B;
-    --blue-color: #309C98;
-  }
+  --black-color: #100A14;
+  --yellow-color: #E5C51B;
+  --blue-color: #309C98;
+}
 
 
 body {
@@ -24,10 +24,10 @@ a:visited {
   color : var(--black-color);
 }
 a:hover {
-  color : var(--yellow-color);
+  color : var(--blue-color);
 }
 a:active {
-  color : var(--yellow-color);
+  color : var(--blue-color);
 }
 
 /* select text color */
@@ -122,7 +122,7 @@ a:active {
 }
 
 span { 
-  text-decoration: var(--blue-color) wavy 2px underline; 
+  background: var(--yellow-color); 
 }
 
 .context-text {

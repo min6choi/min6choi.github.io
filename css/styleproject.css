@@ -5,10 +5,10 @@
 :root {
     /* need change white and blue*/
     /* color */
-    --white-color: #F6F5F0;/*#F2ECD6;*/
-    --black-color: #100A14;
-    --yellow-color: #E5C51B;
-    --blue-color: #309C98;
+	--white-color: #F6F5F0;
+	--black-color: #100A14;
+	--yellow-color: #E5C51B;
+	--blue-color: #309C98;
   }
 
 /*link text color*/

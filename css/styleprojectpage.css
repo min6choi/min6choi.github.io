@@ -6,11 +6,11 @@
 :root {
     /* need change white and blue*/
     /* color */
-    --white-color: #F6F5F0;/*#F2ECD6;*/
+    --white-color: #F6F5F0;
     --black-color: #100A14;
     --yellow-color: #E5C51B;
-    --blue-color: #44999A;
-}
+    --blue-color: #309C98;
+  }
 
 /*link text color*/
 a:link {
@@ -112,7 +112,7 @@ body {
 }
 
 span {
-    background: var(--blue-color);
+    text-decoration: underline 2px var(--blue-color);
 }
 
 .content-1 {
