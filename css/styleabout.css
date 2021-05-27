@@ -114,6 +114,9 @@ a:active {
 
 .profile-text {
   font-family: 'IM Fell Great Primer', serif;
+/*
+  font-family: 'IM Fell Double Pica', serif;
+  */
   text-align: justify;
   line-height: 25px;
   margin: 25px;
