@@ -13,6 +13,8 @@
 
 body {
   background-color: var(--white-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; 
 }
 
 /*link text color*/
@@ -24,10 +26,10 @@ a:visited {
   color : var(--black-color);
 }
 a:hover {
-  color : var(--blue-color);
+  color : var(--yellow-color);
 }
 a:active {
-  color : var(--blue-color);
+  color : var(--yellow-color);
 }
 
 /* select text color */
@@ -97,9 +99,6 @@ a:active {
   -ms-transition: 0.5s all ease 0s;
 }
 
-.name {
-
-}
 
 .introduction {
   display: flex;
@@ -178,7 +177,6 @@ span {
   
   }
 }
-
 
 
 /* this is for only iphone12 mini*/

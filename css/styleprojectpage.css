@@ -36,8 +36,6 @@ a:link {
 body {
     margin: 0 auto;
     background-color: var(--white-color);
-    --color-link: var(--blue-color);
-    --color-link-hover: var(--blue-color);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
