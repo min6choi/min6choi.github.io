@@ -108,7 +108,7 @@ body {
 	--offset: 20vw;
 	--move-initial: calc(-25% + var(--offset));
 	--move-final: calc(-50% + var(--offset));
-	--item-font-size: 10vw;
+	--item-font-size: 8.5vw;
 	counter-reset: menu;
 }
 
@@ -148,7 +148,7 @@ body {
 
 .tag {
 	font-family: 'IM Fell Great Primer', serif;
-	font-size: 1.5em;
+	font-size: 1.2em;
 	color: var(--black-color);
 }
 
@@ -193,7 +193,7 @@ body {
 	font-size: var(--item-font-size);
 	padding: 0 1vw;
 	font-weight: 900;
-	line-height: 1.15;
+	line-height: 1.2;
 }
 
 .marquee span {
