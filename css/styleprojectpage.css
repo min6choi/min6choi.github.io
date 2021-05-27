@@ -108,7 +108,6 @@ body {
     margin: 2%;
     font-size: 20px;
     font-family: 'IM Fell Great Primer', serif;
-    border : solid 1.5px var(--black-color);
 }
 
 span {
@@ -117,14 +116,13 @@ span {
 
 .content-1 {
     flex-direction: column;
-    border-bottom: solid 1.5px var(--black-color);
-    margin-top: 5%;
-    margin-bottom: 3%;
+    margin-top: 1%;
+    margin-bottom: 2%;
     padding-left: 1%;
 }
 
 .title {
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .tag {
@@ -133,45 +131,32 @@ span {
 }
 
 .link {
-    margin: 10px;
+    margin: 5px;
 
 }
 
 .content-2 {
     text-align: justify;
     display: flex;
-    flex-direction: row-reverse;
-    margin: 1%;
+    flex-direction: row;   
 }
 
-.content-2-photo {
-    margin: 1%;
-}
-
-
-#project-gif {
-    
-    width: 45vw;
-
-}
-
-.content-2-content {
-    margin: 0.5%;
-    padding-right: 3%;
-}
 
 .project-member {
     font-size: 1rem;
     padding-bottom: 5%;
 }
 
-.text-content {
-    font-size: 1rem;
+.content-2-photo {
+    padding-top: 1%;
+
 }
 
 
-
-
+#project-gif {
+    border : var(--black-color) solid 1px;
+    width: 45vw;
+}
 
 .footer {
     font-family: 'IM Fell English SC', serif;
@@ -238,17 +223,7 @@ span {
         margin: 1%;
     }
 
-    .content-2-photo {
-        margin: 1%;
-    }
-    
-    
-    #project-gif {
-       width: 84vw;
-    
-    }
-    
-    .content-2-content {
+    .content-2-text {
         margin: 0.5%;
         padding-right: 3%;
     }
@@ -261,10 +236,18 @@ span {
     .text-content {
         font-size: 1rem;
     }
-    
 
-
+    .content-2-photo {
+        margin: 1%;
     }
+    
+    
+    #project-gif {
+       width: 84vw;
+    
+    }
+}
+    
 
 /* this is for only iphone12 mini*/
 @media only screen 
@@ -288,13 +271,6 @@ span {
             margin-top: 5%;
             margin-bottom: 3%;
             padding-left: 1%;
-        }
-
-        .content-2 {
-            text-align: justify;
-            display: flex;
-            flex-direction: column;
-            margin: 1%;
         }
 
         .title {
@@ -333,7 +309,7 @@ span {
         
         }
         
-        .content-2-content {
+        .content-2-text {
             margin: 0.5%;
             padding-right: 3%;
         }
@@ -346,9 +322,4 @@ span {
         .text-content {
             font-size: 1rem;
         }
-        
-
-        
-      }
-
-
+    }

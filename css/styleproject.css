@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lateef&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica&display=swap');
+
 
 
 :root {
@@ -141,6 +144,12 @@ body {
 .menu__item-link:hover {
 	transition-duration: 0.1s;
 	opacity: 0;
+}
+
+.tag {
+	font-family: 'IM Fell Double Pica', serif;
+	font-size: 1.5em;
+	color: var(--black-color);
 }
 
 /* Make sure 3 items are visible in the viewport by setting suitable font size. */
