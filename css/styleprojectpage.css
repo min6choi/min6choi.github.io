@@ -6,7 +6,7 @@
 :root {
     /* need change white and blue*/
     /* color */
-    --white-color: #F6F5F0;
+    --white-color: #e0ddd4;
     --black-color: #100A14;
     --yellow-color: #E5C51B;
     --blue-color: #309C98;
@@ -118,8 +118,7 @@ span {
     flex-direction: column;
     margin-top: 1%;
     margin-bottom: 2%;
-    line-height: 2.2rem;
-    
+    line-height: 2.2rem;  
 }
 
 
@@ -142,7 +141,7 @@ span {
     display: flex;
     flex-direction: row;  
     padding-top: 1%;
-    line-height: 1.8rem;
+    line-height: 1.5rem;
 
 }
 
@@ -154,6 +153,9 @@ span {
     padding-bottom: 3%;
 }
 
+.text-content {
+    font-size: 1rem;
+}
 
 .project-member {
     padding-top: 5%;
@@ -199,73 +201,25 @@ span {
 }
 
 @media screen and (max-width: 767px){
-    .name {
-        font-size: 17px;
-    }
-    
     .content {
-        margin: 1%;
-        font-family: 'IM Fell Great Primer', serif;
-        border : none;
-    }
-
-    .content-1 {
-        flex-direction: column;
-        margin-top: 5%;
-        margin-bottom: 3%;
+        padding-right: 1%;
         padding-left: 1%;
-        border : none;
-    }
-
-    .title {
-        font-size: 1.5rem;
-    }
-    
-    .tag {
-        font-size: 0.9rem;
-        margin: 5px;
-    }
-
-    .tag {
-        font-size: 1rem;
-        margin: 5px;
-    }
-    
-    .link {
-        margin: 10px;
-    
+        font-size: 10px;
+        font-family: 'IM Fell Great Primer', serif;
     }
     
     .content-2 {
         text-align: justify;
         display: flex;
         flex-direction: column;
-        margin: 1%;
+        font-size: 15px;
+        line-height: 20px;
     }
 
-    .content-2-text {
-        margin: 0.5%;
-        padding-right: 3%;
-    }
-    
-    .project-member {
-        font-size: 1rem;
-        padding-bottom: 5%;
-    }
-    
-    .text-content {
-        font-size: 1rem;
-    }
-
-    .content-2-photo {
-        margin: 1%;
-    }
-    
-    
     #project-gif {
-       width: 84vw;
-    
+        width: 80vw;
     }
+  
 }
     
 
@@ -275,71 +229,23 @@ span {
       and (device-height: 812px) 
       and (-webkit-device-pixel-ratio: 3) {
         
-        .name {
-            font-size: 15px;
-        }
-
         .content {
-            margin: 1%;
-            font-family: 'IM Fell Great Primer', serif;
-            border : none;
-        }
-
-        .content-1 {
-            flex-direction: column;
-            border-bottom: none;
-            margin-top: 5%;
-            margin-bottom: 3%;
+            padding-right: 1%;
             padding-left: 1%;
-        }
-
-        .title {
-            font-size: 1.5rem;
-        }
-        
-        .tag {
-            font-size: 0.9rem;
-            margin: 5px;
-        }
-
-        .tag {
-            font-size: 1rem;
-            margin: 5px;
-        }
-        
-        .link {
-            margin: 10px;
-        
+            font-size: 10px;
+            font-family: 'IM Fell Great Primer', serif;
         }
         
         .content-2 {
             text-align: justify;
             display: flex;
             flex-direction: column;
-            margin: 1%;
+            font-size: 15px;
+            line-height: 20px;
         }
 
-        .content-2-photo {
-            margin: 1%;
-        }
-        
-        
         #project-gif {
-           width: 84vw;
-        
+            width: 80vw;
         }
         
-        .content-2-text {
-            margin: 0.5%;
-            padding-right: 3%;
-        }
-        
-        .project-member {
-            font-size: 1rem;
-            padding-bottom: 5%;
-        }
-        
-        .text-content {
-            font-size: 1rem;
-        }
     }

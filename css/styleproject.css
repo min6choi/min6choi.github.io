@@ -10,7 +10,7 @@
 :root {
     /* need change white and blue*/
     /* color */
-	--white-color: #F6F5F0;
+	--white-color: #e0ddd4;
 	--black-color: #100A14;
 	--yellow-color: #E5C51B;
 	--blue-color: #309C98;
@@ -41,7 +41,7 @@ body {
 	color: var(--blue-color);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	font-family: sofia-pro, sans-serif;
+	font-family: verdana, sans-serif;
 }
 
 .top-menu {
@@ -110,7 +110,7 @@ body {
 	--offset: 20vw;
 	--move-initial: calc(-25% + var(--offset));
 	--move-final: calc(-50% + var(--offset));
-	--item-font-size: 8.5vw;
+	--item-font-size: 6.5vw;
 	counter-reset: menu;
 }
 
@@ -195,7 +195,7 @@ body {
 	font-size: var(--item-font-size);
 	padding: 0 1vw;
 	font-weight: 900;
-	line-height: 1.2;
+	line-height: 1.7;
 }
 
 .marquee span {
@@ -231,7 +231,12 @@ body {
 	}
 }
 
-@media screen and (min-width: 53em) {
+@media screen and (max-width: 767px) {
+	.menu__item-link,
+	.marquee span {
+		line-height: 2;
+	}
+
 	.frame {
 		text-align: left;
 		display: grid;
@@ -263,5 +268,9 @@ body {
 
 	.frame a {
 		pointer-events: auto;
+	}
+
+	.tag {
+		font-size: 0.9em;
 	}
 }
