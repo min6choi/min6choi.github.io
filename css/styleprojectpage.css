@@ -104,6 +104,8 @@ body {
 
 .content {
     margin: 2%;
+    padding-right: 5%;
+    padding-left: 5%;
     font-size: 20px;
     font-family: 'IM Fell Great Primer', serif;
 }
@@ -116,8 +118,10 @@ span {
     flex-direction: column;
     margin-top: 1%;
     margin-bottom: 2%;
-    padding-left: 1%;
+    line-height: 2.2rem;
+    
 }
+
 
 .title {
     font-size: 2rem;
@@ -136,24 +140,42 @@ span {
 .content-2 {
     text-align: justify;
     display: flex;
-    flex-direction: row;   
+    flex-direction: row;  
+    padding-top: 1%;
+    line-height: 1.8rem;
+
+}
+
+.content-2-text {
+    padding-right: 5%;
+}
+
+.text-title {
+    padding-bottom: 3%;
 }
 
 
 .project-member {
-    font-size: 1rem;
+    padding-top: 5%;
     padding-bottom: 5%;
 }
 
-.content-2-photo {
-    padding-top: 1%;
+.project-member-title {
+    padding-bottom: 5%;
+}
 
+.project-member-name {
+    font-size: 1rem;
+}
+
+.content-2-photo {
+    padding-top: 4.3%;
 }
 
 
 #project-gif {
     border : var(--black-color) solid 1px;
-    width: 45vw;
+    width: 42vw;
 }
 
 .footer {
