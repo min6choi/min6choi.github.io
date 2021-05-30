@@ -33,18 +33,6 @@ a:link {
     color: var(--black-color);
   }
 
-body {
-    margin: 0 auto;
-    background-color: var(--white-color);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
-    display: flex;
-    padding: 100px;
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
 .top-menu {
     font-family: 'IM Fell English SC', serif;
     display: flex;
@@ -102,6 +90,18 @@ body {
     -ms-transition: 0.5s all ease 0s;
 }
 
+body {
+    margin: 0 auto;
+    background-color: var(--white-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    display: flex;
+    padding: 100px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
 .content {
     margin: 2%;
     padding-right: 5%;
@@ -115,22 +115,33 @@ span {
 }
 
 .content-1 {
+    padding-top: 3%;
     flex-direction: column;
     margin-bottom: 5%;
 }
 
 
 .title {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    padding-bottom: 1%;
 }
 
 .tag {
-    font-size: 0.9rem;
+    font-size: 0.65rem;
+    font-family: verdana;
+    letter-spacing: 1px;
+    font-weight: bold;
+    padding-bottom: 0.5%;
 }
 
-.link {
-    font-size: 0.9rem;
+.explanation {
+    font-size: 0.65rem;
+    font-family: verdana;
+    letter-spacing: 1px;
+    font-weight: bold;
+    padding-bottom: 1%;
 }
+
 
 .content-2 {
     text-align: justify;
@@ -146,12 +157,14 @@ span {
 
 
 .text-title {
-    padding-bottom: 3%;
+    padding-bottom: 1%;
+    letter-spacing: 1px;
 }
 
 .text-content {
     font-size: 0.8rem;
-    font-family:verdana;
+    font-family: verdana;
+    padding-bottom:1%;
 }
 
 .project-member {
@@ -160,7 +173,8 @@ span {
 }
 
 .project-member-title {
-    padding-bottom: 5%;
+    padding-bottom: 1%;
+    letter-spacing: 1px;
 }
 
 .project-member-name {
@@ -169,7 +183,8 @@ span {
 }
 
 .content-2-photo {
-    padding-top: 4.3%;
+    padding-top: 3.2%;
+    padding-bottom: 3.2%;
 }
 
 .photo2 {
@@ -180,6 +195,13 @@ span {
 #project-gif {
     border : var(--black-color) solid 1px;
     width: 42vw;
+}
+
+
+.link {
+    font-family: verdana;
+    font-size: 0.8rem;
+    font-weight: bold;
 }
 
 .footer {
@@ -255,7 +277,7 @@ span {
         }
 
         #project-gif {
-            width: 80vw;
+            width: 84vw;
         }
         
     }

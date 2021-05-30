@@ -134,7 +134,7 @@ body {
 
 .menu__item-link::before {
 	all: initial;
-	font-family: sofia-pro, sans-serif;
+	font-family: verdana;
 	counter-increment: menu;
 	content:  counter(menu);
 	position: absolute;
