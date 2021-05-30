@@ -25,10 +25,10 @@ a:link {
     color : var(--black-color);
   }
   a:hover {
-    color : var(--blue-color);
+    color : var(--yellow-color);
   }
   a:active {
-    color : var(--blue-color);
+    color : var(--yellow-color);
 }
 
 body {
