@@ -27,7 +27,7 @@
           <div class="content-1">
               <div class="title">E-day</div>
               <div class="tag">#environmental issue&nbsp;&nbsp;#climate action</div>
-              <div class="explanation">data visualization, Louvain algorithm, 2020</div>
+              <div class="explanation">Data visualization, API, LSTM algorithm, 2021 ~ <a style=font-size:17px;>🚧</a> in progress</div>
           </div>
 
            <!--content-main-->
@@ -35,15 +35,35 @@
             <!--content-text-left-side-->
             <div class="content-2-text">
                     <div class="text-title"><strong>About</strong><br/></div>
-                    <div class ="text-content">&nbsp;The theme of the “most important team” in the DSC Korea Solution Challenge
-                        Hackathon 2021 is Solution Challenge No. 13, climate action based on data visualization, deep learning modeling,
-                        and web implementation. Climate change is an important issue for us, but with an emphasis on the fact that it 
-                        is considered abstract and vague, we have tried to present specific figures compared to the current temperature,
-                          focusing on it right now. In addition, data on the increase in temperature and greenhouse gas due to global 
-                          warming can be easily understood by the general public by visually explaining the invisible virus for the corona,
-                          which is the biggest problem in the present era, through a visual chart. I tried to help people understand 
-                          intuitively by visualizing them. Finally, I thought that it would be convincing to protect the environment 
-                          by presenting predictions based on historical data.
+                    <div class ="text-content">&nbsp;The project E-day is based on the 13th climate change response 
+                      of the DSC Korea Solution Challenge Hackathon 2021. In this project, we focused on the fact that
+                       climate change is an invisible but important issue for us. So we wanted to present specific 
+                       figures compared to the current temperature with a visible data to see the climate change directly.
+                        We have tried to help people understand intuitively by visualizing data on rising temperatures and
+                         increasing greenhouse gases caused by global warming. This idea is founded from a corona virus which
+                          is invisible but is revealed by visual charts. 
+                      <br/>
+                      <br/>
+                      &nbsp;We used HTML, CSS, JS, weather API, and tensorflow for this project. First, using D3.js(a JavaScript 
+                      library for data visualization), we created a dynamic and interactive line chart of past data. In addition,
+                       by using the weather API to receive the current location and temperature and compare in real time with the
+                        average monthly temperature in 1973 of South Korea which got from the Korea Meteorological Administration,
+                         it was attempted to show the temperature rise due to global warming more intuitively. Finally, a temperature
+                          prediction model was created using machine learning TensorFlow. We tried to predict the average monthly 
+                          temperature after 2021 using the LSTM algorithm, which is widely used for prediction and analysis of time
+                           series data arranged at regular time intervals.
+                      <br/>
+                      <br/>
+                      &nbsp;The most interesting thing about this project is that when you access the present(현재) page, you can visually
+                       compare the 1973 temperature in your city with the current temperature in real time to see how much the temperature
+                        has risen compared to the past(Currently only check the temperture of South Korea on Feb). Even if the temperature
+                         value is added or there is data other than the temperature, only the initial data file needs to be changed, so
+                          the prediction model is easy to reuse, and anyone can easily identify the difference while comparing the real-time
+                           temperature with the historical average temperature through the API. We only used the data of South korea in this
+                            project but it also can be used overseas data. If this idea is widely used, we can easily and effectively present
+                             the necessity of responding to environmental changes and  this will have a positive impact on solving environmental
+                              problems we have.
+
                     </div>
                     <div class="project-member">
                       <div class="project-member-title">
