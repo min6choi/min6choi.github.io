@@ -32,6 +32,37 @@ a:active {
   color : var(--yellow-color);
 }
 
+/*special link*/
+.special_link:link{
+  color : var(--black-color);
+  
+}
+.special_link:visited{
+  color : var(--black-color);
+}
+.special_link:hover{
+  color : var(--black-color);
+    
+}  
+.special_link:active{
+  color : var(--black-color);  
+}
+
+/*special link2*/
+.special_link2:link{
+  color : var(--black-color);
+}
+.special_link2:visited{
+  color : var(--black-color);
+}
+.special_link2:hover{
+  color : var(--black-color);
+    
+}  
+.special_link2:active{
+  color : var(--black-color);
+}
+
 /* select text color */
 ::selection {
   background: var(--yellow-color);
@@ -101,9 +132,10 @@ a:active {
 
 
 .introduction {
+  font-family: 'IM Fell Great Primer', serif;
   display: flex;
   flex-direction: column;
-  padding: 90px;
+  padding: 125px 0 0 0;
   align-items: center;
   justify-content: center;
 }
@@ -113,10 +145,6 @@ a:active {
 }
 
 .profile-text {
-  font-family: 'IM Fell Great Primer', serif;
-/*
-  font-family: 'IM Fell Double Pica', serif;
-  */
   text-align: justify;
   line-height: 25px;
   margin: 25px;
@@ -127,9 +155,8 @@ span {
   background: var(--yellow-color); 
 }
 
-.context-text {
+.contact-text {
   width: 500px;
-
 }
 
 
@@ -175,8 +202,8 @@ span {
     width: 350px;
   }
 
-  .context-text {
-    width: 300px;
+  .contact-text {
+    width: 350px;
   
   }
 }
