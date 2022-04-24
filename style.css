@@ -54,7 +54,7 @@ a:active {
 
 .title {
   display: flex;
-  padding: 200px;
+  padding: 250px;
   padding-left: 10%;
   padding-right: 10%;
   flex-direction: column;
@@ -74,6 +74,7 @@ a:active {
   font-family: 'La Belle Aurore', cursive;
   letter-spacing: 3px;
   color: var(--white-color);
+  padding-top: 5px;
   padding-bottom: 20px;
 }
 
@@ -83,6 +84,7 @@ a:active {
   justify-content: space-around;
   align-items: center;
   font-family: 'IM Fell Great Primer', serif;
+  padding-top: 10px;
 }
 
 .about {
@@ -314,3 +316,4 @@ a:active {
 
 
     
+
