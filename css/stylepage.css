@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lateef&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon&display=swap');
 
 :root {
-    /* color */
-    --white-color: #FAF7F0;
+  /* color */
+  --white-color: #FAF7F0;
   --black-color: #100A14;
   --yellow-color: #E5C51B;
   --blue-color: #309C98;
@@ -15,6 +17,16 @@ body {
   background-color: var(--white-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; 
+}
+
+.project-page {
+  margin: 0;
+  --color-text: var(--black-color);
+  --color-bg: var(--white-color);
+  --color-link: var(--blue-color);
+  --color-link-hover: var(--blue-color);
+  color: var(--blue-color);
+  font-family: verdana, sans-serif;
 }
 
 /*link text color*/
@@ -85,9 +97,6 @@ a:active {
   background-color: var(--white-color);
   color: var(--black-color);
   font-size: 23px;
-  /*
-  border-bottom: #100A14 solid 1px;
-  */
   justify-content: space-between;
   align-items: center;
 }
@@ -151,12 +160,128 @@ a:active {
   width: 500px;
 }
 
-span { 
-  background: var(--yellow-color); 
-}
+
 
 .contact-text {
   width: 500px;
+}
+
+/* only for the project page*/
+span { 
+  background: var(--white-color); 
+}
+
+.menu {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	padding: 17vh 0 25vh;
+	--marquee-width: 100vw;
+	--offset: 20vw;
+	--move-initial: calc(-25% + var(--offset));
+	--move-final: calc(-50% + var(--offset));
+	--item-font-size: 6.5vw;
+	counter-reset: menu;
+}
+
+.menu__item {
+	cursor: default;
+	position: relative;
+	padding: 0 5vw;
+}
+
+.menu__item-link {
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+	-webkit-text-stroke: 1.5px var(--black-color);
+	text-stroke: 1.5px var(--black-color);
+	-webkit-text-fill-color: transparent;
+	text-fill-color: transparent;
+	color: transparent;
+	transition: opacity 0.4s;
+}
+
+.menu__item-link::before {
+	all: initial;
+	font-family: verdana;
+	counter-increment: menu;
+	content:  counter(menu);
+	position: absolute;
+	bottom: 60%;
+	left: 0;
+	pointer-events: none;
+}
+
+.menu__item-link:hover {
+	transition-duration: 0.1s;
+	opacity: 0;
+}
+
+.tag {
+	font-family: 'IM Fell Great Primer', serif;
+	font-size: 1.2em;
+	color: var(--black-color);
+}
+
+/* Make sure 3 items are visible in the viewport by setting suitable font size. */
+
+.marquee {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: var(--marquee-width);
+	overflow: hidden;
+	pointer-events: none;
+	/*
+	mix-blend-mode: ;
+	*/
+}
+
+.marquee__inner {
+	width: fit-content;
+	display: flex;
+	position: relative;
+	transform: translate3d(var(--move-initial), 0, 0);
+	animation: marquee 5s linear infinite;
+	animation-play-state: paused;
+	opacity: 0;
+	transition: opacity 0.1s;
+}
+
+.menu__item-link:hover ~ .marquee .marquee__inner {
+	animation-play-state: running;
+	opacity: 1;
+	transition-duration: 0.4s;
+}
+
+.marquee span {
+	text-align: center;
+}
+
+.menu__item-link,
+.marquee span {
+	white-space: nowrap;
+	font-size: var(--item-font-size);
+	padding: 0 1vw;
+	font-weight: 900;
+	line-height: 1.7;
+}
+
+.marquee span {
+	font-style: italic;
+}
+
+@keyframes marquee {
+	0% {
+		transform: translate3d(var(--move-initial), 0, 0);
+	}
+
+	100% {
+		transform: translate3d(var(--move-final), 0, 0);
+	}
 }
 
 
@@ -206,6 +331,49 @@ span {
     width: 350px;
   
   }
+  
+  /* only for the project page*/
+  .menu__item-link,
+	.marquee span {
+		line-height: 2;
+	}
+
+	.frame {
+		text-align: left;
+		display: grid;
+		align-content: space-between;
+		width: 100%;
+		padding: 2.5rem 6vw;
+		pointer-events: none;
+		grid-template-columns: 75% 25%;
+		grid-template-rows: auto;
+	}
+
+	.frame__title-wrap {
+		display: flex;
+		align-items: start;
+	}
+
+	.frame__info {
+		margin: 0;
+	}
+
+	.frame__title {
+		margin: 0 1rem 0 0;
+	}
+
+	.frame__links {
+		padding: 0;
+		justify-self: end;
+	}
+
+	.frame a {
+		pointer-events: auto;
+	}
+
+	.tag {
+		font-size: 0.9em;
+	}
 }
 
 
