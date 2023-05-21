@@ -120,6 +120,22 @@ a:active {
   -ms-transition: 0.5s all ease 0s;
 }
 
+.link-container-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.link-container {
+  display: flex;
+}
+
+.link {
+  margin-right: 1px;
+  margin-left: 7px; 
+}
+
+
 .project {
   transition: 0.5s all ease 0s;
   -webkit-transition: 0.5s all ease 0s;
@@ -144,7 +160,7 @@ a:active {
   font-family: 'IM Fell Great Primer', serif;
   display: flex;
   flex-direction: column;
-  padding: 125px 0 0 0;
+  padding: 100px 0 0 0;
   align-items: center;
   justify-content: center;
 }
@@ -155,7 +171,7 @@ a:active {
 
 .profile-text {
   text-align: justify;
-  line-height: 25px;
+  line-height: 27px;
   margin: 25px;
   width: 500px;
 }
@@ -164,6 +180,7 @@ a:active {
 
 .contact-text {
   width: 500px;
+  margin-top: 5px;
 }
 
 /* only for the project page*/
