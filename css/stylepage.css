@@ -420,12 +420,16 @@ span {
   }
   
   .profile-text {
-    font-size: 1em;
-    width: 93%;
-  } 
+    font-family: 'IM Fell Great Primer', serif;
+    text-align: justify;
+    line-height: 22px;
+    font-size: 0.85em;
+    margin: 20px;
+    width: 345px;
+  }
 
   .contact-text {
-    width: 93%;
+    width: 340px;
   
   }
 }
