@@ -339,13 +339,14 @@ span {
   .profile-text {
     font-family: 'IM Fell Great Primer', serif;
     text-align: justify;
-    line-height: 20px;
+    line-height: 22px;
+    font-size: 0.85em;
     margin: 20px;
-    width: 350px;
+    width: 345px;
   }
 
   .contact-text {
-    width: 350px;
+    width: 340px;
   
   }
   
