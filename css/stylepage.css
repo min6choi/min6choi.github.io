@@ -423,13 +423,13 @@ span {
     font-family: 'IM Fell Great Primer', serif;
     text-align: justify;
     line-height: 22px;
-    font-size: 0.85em;
+    font-size: 90%;
     margin: 20px;
     width: 345px;
   }
 
   .contact-text {
-    width: 340px;
+    width: 90%;
   
   }
 }
