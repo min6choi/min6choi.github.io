@@ -1,16 +1,16 @@
 const imgClasses = ['img/1.png','img/2.png','img/3.png','img/4.png','img/5.png','img/6.png','img/7.png','img/8.png','img/9.png','img/10.png'];
 
 const detailPages = [
-  'detailpage/UN-Human-Rights-Knowledge-Gateway.html',
+  'detailpage/un-human-rights-knowledge-gateway.html',
   'detailpage/deep-learning-and-emotion-analysis.html',
   'detailpage/a-network-analysis-of-character-emotions-and-political-dynamics.html',
-  'detailpage/Aldo-Leopolds-Digital-Edition.html',
+  'detailpage/aldo-leopolds-digital-edition.html',
   'detailpage/geographical-background-affect-education.html',
   'detailpage/artre.html',
-  'detailpage/Silent-Spring.html',
-  'detailpage/Arne-Naess-LOD.html',
+  'detailpage/silent-spring.html',
+  'detailpage/arne-naess-lod.html',
   'detailpage/i-o-i.html',
-  'detailpage/An-E-day.html',
+  'detailpage/an-e-day.html',
 ];
 
 const homePage = document.getElementById('homePage');
