@@ -750,7 +750,7 @@ function showHome(pushState) {
   hideAll();
   homePage.style.display = '';
   homeLink.style.display = 'none';
-  if (pushState !== false) history.pushState({page:'home'}, '', '#');
+  if (pushState !== false) history.pushState({page:'home'}, '', location.pathname);
 }
 
 function showAbout(pushState) {
@@ -829,7 +829,7 @@ window.addEventListener('popstate', (e) => {
 });
 
 // Initial state
-history.replaceState({page:'home'}, '', '#');
+history.replaceState({page:'home'}, '', location.pathname);
 
 homeLink.addEventListener('click', (e) => { e.preventDefault(); showHome(); });
 aboutLink.addEventListener('click', (e) => { e.preventDefault(); showAbout(); });
