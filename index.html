@@ -419,7 +419,7 @@ body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg); c
       <div class="detail-quote"></div>
       <div class="detail-body">
         <p>This is a Master’s thesis for Digital and Public Humanities at Ca’ Foscari University, where I utilized the ELECTRA deep learning model to quantify the emotional and structural role of pauses in Samuel Beckett’s Waiting for Godot.</p>
-        <p>My research established a data-driven methodology to analyze how non-linguistic elements regulate emotional rhythm, at the intersection of computational linguistics and literary theory".</p>
+        <p>My research established a data-driven methodology to analyze how non-linguistic elements regulate emotional rhythm, at the intersection of computational linguistics and literary theory.</p>
       </div>
       <div class="detail-links">
         <a class="detail-link-btn" href="https://unitesi.unive.it/handle/20.500.14247/24338" target="_blank"><span class="material-symbols-outlined">article</span>Thesis</a>
@@ -493,7 +493,7 @@ body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg); c
       </div>
       <div class="detail-links">
         <a class="detail-link-btn" href="https://public.tableau.com/app/profile/minsik.choi3807/vizzes" target="_blank"><span class="material-symbols-outlined">stacked_bar_chart</span>Tableau</a>
-        <a class="detail-link-btn" href="https://drive.google.com/file/d/1A1iGOecptRuV6ujt7r4kYoJG-Cs_1dye/view" target="_blank"><span class="material-symbols-outlined">article</span>Report</a>
+        <a class="detail-link-btn" href="https://drive.google.com/file/d/1CPjoNM8N_G-EhC9YAMrQy8XysQW0vYQc/view?usp=sharing" target="_blank"><span class="material-symbols-outlined">article</span>Report</a>
       </div>
       <div class="detail-info">
         <div class="info-row"><div class="info-label"><span class="material-symbols-outlined">grid_view</span>Category</div><div class="info-value">Academic</div></div>
@@ -650,7 +650,7 @@ body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg); c
 
     <div class="cv-meta-links">
       <a href="https://www.linkedin.com/in/minsik617/" target="_blank">LinkedIn ↗</a>
-      <!--<a href="#" target="_blank">Resume ↗</a>-->
+      <a href="https://drive.google.com/file/d/1GWgnzfglyKvyBZXdAYTM1_XfPA6wHORa/view?usp=sharing" target="_blank">Resume ↗</a>
     </div>
 
     <div class="cv-section">
@@ -719,8 +719,7 @@ body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg); c
       <a href="https://www.instagram.com/min6choi/" target="_blank" aria-label="Instagram">
         <i class="fab fa-instagram"></i>
       </a>
-      <a href="https://mail.google.com/mail/?view=cm&to=minsik617@gmail.com"         
-      target="_blank" aria-label="Email">
+      <a href="mailto:minsik617@gmail.com" aria-label="Email">
       <span class="material-symbols-outlined" style="font-size:22px;">mail</span>
       </a>
     </div>
@@ -746,11 +745,14 @@ function hideAll() {
   aboutLink.classList.remove('active');
 }
 
-function showHome(pushState) {
+function showHome(pushState, scrollY) {
   hideAll();
   homePage.style.display = '';
   homeLink.style.display = 'none';
   if (pushState !== false) history.pushState({page:'home'}, '', location.pathname);
+  if (scrollY !== undefined) {
+    requestAnimationFrame(() => window.scrollTo({top: scrollY, behavior: 'instant'}));
+  }
 }
 
 function showAbout(pushState) {
@@ -780,12 +782,14 @@ function showDetail(idx, pushState) {
   detailPage.style.display = 'block';
   homeLink.style.display = 'block';
   window.scrollTo(0, 0);
-  if (pushState !== false) history.pushState({page:'detail',idx}, '', '#detail-'+idx);
+  if (pushState !== false) {
+    history.replaceState({...history.state, scrollY: window.scrollY}, '');
+    history.pushState({page:'detail',idx}, '', '#detail-'+idx);
+  }
 }
 
 function showSkillPage(skillName, pushState) {
   document.getElementById('skillTitle').textContent = skillName;
-  document.getElementById('skillSubtitle').textContent = 'Projects featuring this skill';
 
   const grid = document.getElementById('skillGrid');
   grid.innerHTML = '';
@@ -822,7 +826,7 @@ function showSkillPage(skillName, pushState) {
 // Browser back/forward
 window.addEventListener('popstate', (e) => {
   const state = e.state;
-  if (!state || state.page === 'home') { showHome(false); }
+  if (!state || state.page === 'home') { showHome(false, state && state.scrollY); }
   else if (state.page === 'detail') { showDetail(state.idx, false); }
   else if (state.page === 'skill') { showSkillPage(state.skill, false); }
   else if (state.page === 'about') { showAbout(false); }
