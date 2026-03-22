@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LKPBB44DEF"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-LKPBB44DEF');
+</script>
+<link rel="shortcut icon" type="image/x-icon" href="../img/main.png">
+<title>Arne Naess LOD – Minsik Choi</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<nav class="top-bar">
+  <div class="top-bar-left"></div>
+  <div class="top-bar-center">
+    <a class="top-bar-home" href="../index.html" style="display:block">Home</a>
+  </div>
+  <div class="top-bar-right">
+    <a class="top-bar-about" href="../about.html">About</a>
+  </div>
+</nav>
+
+<div style="padding-top:52px;">
+  <div style="animation:fadeIn .4s ease;">
+    <div class="detail-wrapper"><div class="detail-layout">
+      <img class="detail-image" src="../img/8-1.png" alt="">
+      <h2 class="detail-title">Arne Naess LOD</h2>
+      <div class="detail-quote">Jan 2022</div>
+      <div class="detail-body">
+        <p>As a personal research project, I designed and implemented a Linked Open Data (LOD) model to map environmental philosopher Arne Naess's life through key locations, events, and concepts.</p>
+        <p>By integrating RDF and metadata schema design with E/R modelling, I structured complex biographical data into a navigable digital network.</p>
+      </div>
+      <div class="detail-links">
+        <a class="detail-link-btn" href="https://minsikchoi.com/arnenaesslod/" target="_blank"><span class="material-symbols-outlined">language</span>Website</a>
+      </div>
+      <div class="detail-info">
+        <div class="info-row"><div class="info-label"><span class="material-symbols-outlined">grid_view</span>Category</div><div class="info-value">Independent</div></div>
+        <div class="info-row"><div class="info-label"><span class="material-symbols-outlined">group</span>Type</div><div class="info-value">Individual</div></div>
+        <div class="info-row"><div class="info-label"><span class="material-symbols-outlined">build</span>Technical Skills</div><div class="info-value"><div class="skill-links">
+          <a class="skill-link" href="#">Linked Open Data</a><a class="skill-link" href="#">Web Development</a><a class="skill-link" href="#">RDF</a>
+        </div></div></div>
+      </div>
+    </div></div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <span class="site-footer-copy">© 2025 Minsik Choi</span>
+    <div class="site-footer-icons">
+      <a href="https://www.linkedin.com/in/minsik617/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://www.instagram.com/min6choi/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:minsik617@gmail.com" aria-label="Email"><span class="material-symbols-outlined" style="font-size:22px;">mail</span></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.skill-link').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.location.href = '../index.html?skill=' + encodeURIComponent(link.textContent.trim());
+  });
+});
+</script>
+</body>
+</html>
