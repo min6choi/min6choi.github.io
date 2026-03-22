@@ -761,7 +761,7 @@ function showAbout(pushState) {
   homeLink.style.display = 'block';
   aboutLink.classList.add('active');
   window.scrollTo(0, 0);
-  if (pushState !== false) history.pushState({page:'about'}, '', '#about');
+  if (pushState !== false) history.pushState({page:'about'}, '', 'about');
 }
 
 function showDetail(idx, pushState) {
