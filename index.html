@@ -1,63 +1,927 @@
 <!DOCTYPE html>
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta property="og:title" content="Minsik Choi">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LKPBB44DEF"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LKPBB44DEF"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-LKPBB44DEF');
+</script>
+<link rel="shortcut icon" type="image/x-icon" href="img/main.png">
+<title>Minsik Choi</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=article,build,close,code,grid_view,group,language,link,mail,palette,search,stacked_bar_chart,video_library&display=block');
 
-    gtag('config', 'G-LKPBB44DEF');
-    </script>
-    <meta property="og:description" content="philosophy student / developer">
-    <meta property="og:image" content="meta.png">
-    <link rel="shortcut icon" type="image/x-icon" href="img/main.png">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script>
-        $( document ).ready( function() {
-          $( '.title-1' ).animate( {
-            opacity: '1'
-          }, 900 );
-        } );
-      </script>
-      <!--analyrics-->
-      <script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
-      <script type="text/javascript">
-      if(!wcs_add) var wcs_add = {};
-      wcs_add["wa"] = "d7257f83801828";
-      if(window.wcs) {
-      wcs_do();
-      }
-      </script>
-    <title>Minsik Choi</title>
-    <link href="style.css" rel="stylesheet" >
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  /* color palette */
+  --bg-color: #F5F0E8;
+  --black-color: #100A14;
+  --white-color: #ffffff;
+  --gray-secondary-color: #666666;
+  --gray-muted-color: #999999;
+  --gray-placeholder-color: #c0c0c0;
+  --gray-hover-color: #aaaaaa;
+  --border-color: #e0e0e0;
+  --subtle-border-color: #f0ede8;
+  --green-color: #006574;
+  --yellow-color: #FAC912;
+  --overlay-bg-color: rgba(255,255,255,.90);
+  --filter-bg-color: rgba(255,255,255,.7);
+
+  /* semantic aliases */
+  --bg: var(--bg-color);
+  --text-primary: var(--black-color);
+  --text-secondary: var(--gray-secondary-color);
+  --text-muted: var(--gray-muted-color);
+  --accent: var(--black-color);
+  --link-green: var(--green-color);
+  --tag-active-bg: var(--black-color);
+  --tag-active-color: var(--white-color);
+  --border: var(--border-color);
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg); color: var(--text-primary); line-height: 1.6; overflow-x: hidden; }
+
+
+/* ── TOP BAR ── */
+.top-bar { position:fixed; top:0; left:0; right:0; height:52px; background:var(--bg); border-bottom:1px solid var(--border); display:flex; align-items:center; padding:0 32px; z-index:1000; }
+.top-bar-left { display:flex; align-items:center; gap:12px; flex:1; }
+.top-bar-center { display:flex; align-items:center; justify-content:center; }
+.top-bar-home { font-family:'Inter',sans-serif; font-size:.88rem; font-weight:500; color:var(--text-primary); text-decoration:none; cursor:pointer; transition:opacity .2s; display:none; }
+.top-bar-home:hover { opacity:.5; }
+.top-bar-right { display:flex; align-items:center; gap:20px; flex:1; justify-content:flex-end; }
+.top-bar-about { font-family:'Inter',sans-serif; font-size:.88rem; font-weight:500; color:var(--text-primary); text-decoration:none; cursor:pointer; transition:opacity .2s; }
+.top-bar-about:hover { opacity:.5; }
+.material-symbols-outlined { font-family:'Material Symbols Outlined'; font-weight:normal; font-style:normal; line-height:1; letter-spacing:normal; text-transform:none; display:inline-flex; align-items:center; white-space:nowrap; direction:ltr; font-feature-settings:'liga'; -webkit-font-smoothing:antialiased; user-select:none; }
+.search-toggle { width:38px; height:38px; display:flex; align-items:center; justify-content:center; background:none; border:none; cursor:pointer; color:var(--text-primary); transition:opacity .2s; }
+.search-toggle:hover { opacity:.5; }
+.search-toggle .material-symbols-outlined { font-size:20px; }
+
+/* ── SEARCH OVERLAY ── */
+.search-overlay { position:fixed; top:0; left:0; right:0; bottom:0; background:var(--overlay-bg-color); z-index:2000; display:flex; flex-direction:column; align-items:center; padding-top:100px; opacity:0; pointer-events:none; transition:opacity .35s ease; overflow-y:auto; }
+.search-overlay.open { opacity:1; pointer-events:auto; }
+.search-close { position:fixed; top:20px; right:28px; width:40px; height:40px; display:flex; align-items:center; justify-content:center; background:none; border:none; cursor:pointer; color:var(--text-primary); font-size:1.6rem; font-weight:300; z-index:2001; transition:opacity .2s; }
+.search-close:hover { opacity:.5; }
+.search-input-area { width:100%; max-width:620px; padding:0 40px; }
+.search-field { display:flex; align-items:center; gap:12px; border-bottom:1.5px solid var(--text-primary); padding-bottom:10px; margin-bottom:36px; }
+.search-field input { flex:1; border:none; outline:none; font-family:'Inter',sans-serif; font-size:1.15rem; font-weight:400; color:var(--text-primary); background:transparent; padding:0; caret-color:var(--text-primary); }
+.search-field input::placeholder { color:var(--gray-placeholder-color); font-weight:300; }
+.search-field .material-symbols-outlined { flex-shrink:0; font-size:22px; color:var(--text-primary); }
+.search-results-list { width:100%; max-width:620px; padding:0 40px 60px; }
+.search-result-item { display:block; padding:16px 0; text-decoration:none; color:inherit; cursor:pointer; transition:opacity .15s; }
+.search-result-item:hover { opacity:.7; }
+.search-result-title { font-family:'Inter',sans-serif; font-size:1rem; font-weight:600; color:var(--link-green); text-decoration:underline; text-underline-offset:3px; line-height:1.4; margin-bottom:4px; }
+.search-result-meta { font-family:'La Belle Aurore',cursive; font-size:.95rem; color:var(--text-muted); }
+.search-no-results { padding:30px 0; text-align:center; font-family:'La Belle Aurore',cursive; font-size:1.1rem; color:var(--text-muted); }
+
+/* ── HOME PAGE ── */
+#homePage { transition:opacity .3s ease; }
+.filter-banner { display:none; align-items:center; justify-content:center; gap:12px; padding:10px 20px; background:var(--filter-bg-color); border-bottom:1px solid var(--border); font-family:'Inter',sans-serif; font-size:.78rem; color:var(--text-secondary); }
+.filter-banner.visible { display:flex; }
+.filter-banner strong { color:var(--text-primary); font-weight:600; }
+.filter-banner button { font-family:'Inter',sans-serif; font-size:.7rem; font-weight:500; padding:4px 12px; border-radius:14px; border:1px solid var(--border); background:var(--white-color); color:var(--text-secondary); cursor:pointer; transition:all .2s; }
+.filter-banner button:hover { border-color:var(--accent); color:var(--accent); }
+.header { padding:120px 0 60px; }
+.header-inner { max-width:1010px; margin:0 auto; padding:0 40px; display:grid; grid-template-columns:1fr 1fr; align-items:center; }
+.profile-img { width:93px; height:93px; border-radius:50%; overflow:hidden; margin-left:80px; object-fit:cover; display:block; }
+.header-text {}
+.header h1 { font-family:'Inter',sans-serif; font-size:.93rem; font-weight:600; letter-spacing:0; margin-bottom:5px; color:var(--text-primary); }
+.header .bio { font-family:'Inter',sans-serif; font-size:.82rem; line-height:1.75; color:var(--text-secondary); max-width:none; }
+
+/* ── ABOUT PAGE ── */
+#aboutPage { display:none; padding-top:52px; animation:fadeIn .4s ease; }
+.about-wrapper { max-width:1010px; margin:0 auto; padding:68px 40px 80px; }
+.about-header { display:grid; grid-template-columns:1fr 1fr; align-items:center; margin-bottom:40px; }
+.about-profile-img { width:93px; height:93px; border-radius:50%; overflow:hidden; margin-left:80px; object-fit:cover; display:block; }
+.about-header-text {}
+.about-header-text h2 { font-family:'Inter',sans-serif; font-size:.93rem; font-weight:600; margin-bottom:5px; color:var(--text-primary); }
+.about-header-text p { font-family:'Inter',sans-serif; font-size:.82rem; line-height:1.75; color:var(--text-secondary); max-width:none; }
+.about-divider { border:none; border-top:1px solid var(--border); margin:0 0 40px; }
+.cv-section { margin-bottom:40px; }
+.cv-section-title { font-family:'Inter',sans-serif; font-size:1.3rem; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--text-primary); margin-bottom:20px; padding-bottom:8px; border-bottom:1px solid var(--border); }
+.cv-item { display:grid; grid-template-columns:1fr 1fr; gap:0; padding:12px 0; border-bottom:1px solid var(--subtle-border-color); }
+.cv-item:last-child { border-bottom:none; }
+.cv-item-date { font-family:'Inter',sans-serif; font-size:.75rem; color:var(--text-muted); padding-top:2px; line-height:1.6; }
+.cv-item-org { display:block; font-size:.80rem; font-weight:500; color:var(--text-primary); margin-top:3px; }
+.cv-item-content {}
+.cv-item-title { font-family:'Inter',sans-serif; font-size:.88rem; font-weight:600; color:var(--text-primary); margin-bottom:3px; }
+.cv-item-sub { font-family:'Inter',sans-serif; font-size:.80rem; color:var(--text-secondary); margin-top:1px; line-height:1.5;}
+.cv-item-sub a {font-family: 'Inter', sans-serif; font-size: .80rem; font-weight: 500; color: var(--text-secondary); text-decoration: none; transition: color .2s;}
+.cv-item-sub a:hover {color: var(--text-primary);}
+.cv-skills-list { display:flex; flex-wrap:wrap; gap:6px; }
+.cv-skill-chip { font-size:.68rem; font-weight:500; padding:3px 10px; border-radius:6px; border:1px solid var(--border); color:var(--text-secondary); background:transparent; }
+
+/* ── CV META LINKS ── */
+.cv-meta-links { display:flex; justify-content:flex-end; align-items:center; gap:24px; margin-bottom:24px; }
+.cv-meta-links a { font-family:'Inter',sans-serif; font-size:.78rem; font-weight:500; color:var(--text-secondary); text-decoration:none; transition:color .2s; }
+.cv-meta-links a:hover { color:var(--text-primary); }
+
+/* ── FOOTER ── */
+.site-footer { border-top:1px solid var(--border); padding:40px 0; }
+.site-footer-inner { padding:0 40px; display:flex; align-items:center; justify-content:space-between; }
+.site-footer-copy { font-family:'Inter',sans-serif; font-size:.75rem; color:var(--text-muted); }
+.site-footer-icons { display:flex; align-items:center; gap:22px; }
+.site-footer-icons a { color:var(--text-primary); text-decoration:none; transition:opacity .2s; display:flex; align-items:center; }
+.site-footer-icons a:hover { opacity:.5; }
+.site-footer-icons a svg { width:22px; height:22px; }
+.site-footer-icons a i { font-size:18px; }
+.main-container { max-width:1010px; margin:0 auto; padding:0 20px 80px; }
+
+/* Categories: right-aligned, rounded rectangle */
+.categories { display:flex; align-items:center; gap:8px; padding:16px 20px; border-bottom:1px solid var(--border); margin-bottom:0; flex-wrap:wrap; justify-content:flex-end; }
+.categories .label { font-size:.62rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--text-muted); margin-right:auto; }
+.categories button { font-family:'Inter',sans-serif; font-size:.64rem; font-weight:500; letter-spacing:.05em; text-transform:uppercase; padding:5px 14px; border-radius:6px; border:1px solid var(--border); background:transparent; color:var(--text-secondary); cursor:pointer; transition:all .25s ease; }
+.categories button:hover { border-color:var(--accent); color:var(--accent); }
+.categories button.active { background:var(--tag-active-bg); color:var(--tag-active-color); border-color:var(--tag-active-bg); }
+
+/* Card grid */
+.card-grid { display:grid; grid-template-columns:repeat(3,1fr); border-left:1px solid var(--border); }
+.card { border-right:1px solid var(--border); border-bottom:1px solid var(--border); padding:20px; background:transparent; position:relative; cursor:pointer; overflow:hidden; }
+/* Hover: inner content shrinks, border stays */
+.card-inner { transition:transform .4s cubic-bezier(.25,.1,.25,1); transform-origin:center center; }
+.card:hover .card-inner { transform:scale(0.95); }
+.card-meta { display:flex; justify-content:flex-end; align-items:center; margin-bottom:14px; }
+.card-tag { font-size:.62rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; padding:3px 10px; border-radius:6px; border:1px solid var(--border); color:var(--text-secondary); background:transparent; }
+.card h3 { font-family:'Inter',sans-serif; font-size:.95rem; font-weight:600; line-height:1.4; margin-bottom:4px; color:var(--text-primary); }
+.card-date { font-size:.72rem; color:var(--text-muted); font-weight:400; margin-bottom:10px; }
+.card p { font-size:.78rem; line-height:1.6; color:var(--text-secondary); margin-bottom:10px; }
+.card-skill-tag { display:inline-block; font-size:.62rem; font-weight:500; letter-spacing:.04em; padding:3px 10px; border-radius:6px; border:1px solid var(--border); background:var(--bg); color:var(--text-secondary); transition:all .25s ease; }
+.card:hover .card-skill-tag { border-color:var(--gray-hover-color); color:var(--text-primary); }
+.card-skill-tag:hover { background:var(--yellow-color) !important; border-color:var(--yellow-color) !important; color:var(--text-primary) !important; }
+.no-results { display:none; grid-column:1/-1; text-align:center; padding:60px 20px; font-size:.9rem; color:var(--text-muted); }
+.no-results.visible { display:block; }
+
+/* ── DETAIL PAGE ── */
+#detailPage { display:none; padding-top:52px; }
+.detail-section-page { display:none; animation:fadeIn .4s ease; }
+@keyframes fadeIn { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:translateY(0)} }
+.detail-wrapper { max-width:1010px; margin:0 auto; padding:80px 40px 80px 20px; }
+.detail-layout {
+  display:grid;
+  grid-template-columns:429px 1fr;
+  grid-template-rows:auto auto 1fr auto auto;
+  grid-template-areas:"img title" "img quote" "img body" "img links" "img info";
+  column-gap:60px;
+  align-items:start;
+}
+.detail-image { grid-area:img; width:100%; aspect-ratio:16/9; border-radius:8px; position:sticky; top:72px; margin-top:10px; object-fit:cover; display:block; border:1px solid var(--border-color); }
+.detail-title { grid-area:title; font-family:'IM Fell French Canon',serif; font-size:2rem; font-weight:700; line-height:1.2; margin-bottom:16px; color:var(--text-primary); }
+.detail-quote { grid-area:quote; font-family:'Inter',sans-serif; font-size:.7rem; font-weight:500; letter-spacing:.08em; text-transform:uppercase; color:var(--text-muted); margin-bottom:24px; }
+.detail-body { grid-area:body; }
+.detail-body p { font-family:'Inter',sans-serif; font-size:.85rem; line-height:1.8; color:var(--text-secondary); margin-bottom:16px; }
+.detail-links { grid-area:links; display:flex; gap:12px; margin-top:4px; }
+.detail-link-btn { display:flex; align-items:center; justify-content:center; gap:7px; flex:1; padding:9px 16px; border-radius:8px; border:1px solid var(--border); background:var(--bg); color:var(--text-primary); text-decoration:none; font-family:'Inter',sans-serif; font-size:.78rem; font-weight:500; cursor:pointer; transition:all .25s ease; letter-spacing:.03em; }
+.detail-link-btn .material-symbols-outlined { font-size:16px; flex-shrink:0; }
+.detail-link-btn:hover { background:var(--yellow-color); border-color:var(--yellow-color); }
+
+/* Info rows */
+.detail-info { grid-area:info; margin-top:28px; border-top:1px solid var(--border); padding-top:16px; }
+.info-row { display:flex; align-items:center; padding:10px 0; border-bottom:1px solid var(--subtle-border-color); gap:12px; }
+.info-row:last-child { border-bottom:none; }
+/* Technical Skills row has .skill-links — top-align label with first tag row */
+.info-row:has(.skill-links) { align-items:flex-start; }
+.info-row:has(.skill-links) .info-label { padding-top:4px; }
+.info-label { font-family:'Inter',sans-serif; font-size:.8rem; font-weight:600; color:var(--text-primary); display:flex; align-items:center; gap:6px; white-space:nowrap; min-width:140px; }
+.info-label .material-symbols-outlined { font-size:16px; flex-shrink:0; }
+.info-value { font-family:'Inter',sans-serif; font-size:.8rem; font-weight:400; color:var(--text-secondary); flex:1; }
+.info-value .skill-links { display:flex; flex-wrap:wrap; gap:6px; }
+.info-value a.skill-link { display:inline-block; font-size:.7rem; font-weight:500; letter-spacing:.04em; padding:4px 12px; border-radius:6px; border:1px solid var(--border); background:var(--bg); color:var(--text-secondary); text-decoration:none; cursor:pointer; transition:all .25s ease; }
+.info-value a.skill-link:hover { background:var(--yellow-color); border-color:var(--yellow-color); color:var(--text-primary); }
+
+/* ── SKILL PAGE ── */
+#skillPage { display:none; padding-top:52px; animation:fadeIn .4s ease; }
+.skill-header { text-align:center; padding:80px 20px 40px; }
+.skill-header h1 { font-family:'Playfair Display',serif; font-size:2.6rem; font-weight:700; letter-spacing:.02em; color:var(--text-primary); margin-bottom:12px; }
+.skill-header p { font-family:'Caveat',cursive; font-size:1.1rem; color:var(--text-muted); }
+.skill-grid { max-width:1010px; margin:0 auto; padding:0 20px 80px; display:grid; grid-template-columns:repeat(3,1fr); gap:0; border-left:1px solid var(--border); border-top:1px solid var(--border); }
+.skill-card { border-right:1px solid var(--border); border-bottom:1px solid var(--border); padding:20px; cursor:pointer; overflow:hidden; background:transparent; }
+.skill-card-inner { transition:transform .4s cubic-bezier(.25,.1,.25,1); transform-origin:center center; }
+.skill-card:hover .skill-card-inner { transform:scale(.95); }
+.skill-card .sk-meta { display:flex; justify-content:flex-end; align-items:center; margin-bottom:14px; }
+.skill-card .sk-tag { font-size:.62rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; padding:3px 10px; border-radius:6px; border:1px solid var(--border); color:var(--text-secondary); background:transparent; }
+.skill-card .sk-img { width:100%; aspect-ratio:6/4; border-radius:8px; margin-bottom:16px; object-fit:cover; display:block; border:1px solid var(--border-color); }
+.skill-card h3 { font-family:'Inter',sans-serif; font-size:.95rem; font-weight:600; line-height:1.4; margin-bottom:4px; color:var(--text-primary); }
+.skill-card .sk-date { font-size:.72rem; color:var(--text-muted); margin-bottom:10px; }
+.skill-card p { font-size:.78rem; line-height:1.6; color:var(--text-secondary); margin-bottom:10px; }
+
+/* ── RESPONSIVE ── */
+@media (max-width:768px) {
+  .card-grid, .skill-grid { grid-template-columns:repeat(2,1fr); }
+  /* Profile: stack image above text on mobile */
+  .header-inner, .about-header {
+    display:flex; flex-direction:column; align-items:flex-start; gap:16px;
+  }
+  .profile-img, .about-profile-img { margin-left:0; }
+  /* CV items: stack date/company above content on mobile */
+  .cv-item { display:flex; flex-direction:column; gap:6px; }
+  /* Detail: flex column — title(1) → quote(2) → image(3) → body(4) → info(5) */
+  .detail-layout { display:flex; flex-direction:column; }
+  .detail-image { position:static; order:3; margin-bottom:24px; padding-right:0; }
+  .detail-quote { order:2; }
+  .detail-body { order:4; }
+  .detail-links { order:5; }
+  .detail-info { order:6; }
+}
+@media (max-width:500px) {
+  .card-grid, .skill-grid { grid-template-columns:1fr; }
+  .search-input-area { padding:0 24px; }
+  .search-results-list { padding:0 24px 40px; }
+  .detail-wrapper { padding:50px 20px 60px; }
+  .detail-title { font-size:1.6rem; }
+}
+
+/* ── Card images ── */
+.img-placeholder { width:100%; aspect-ratio:6/4; border-radius:8px; margin-bottom:16px; object-fit:cover; display:block; border:1px solid var(--border-color); }
+</style>
 </head>
-<body> 
-<!-- introduction -->
-    <div class="title title-1"> <!-- 1 is for jquery-->
-        <img src='img/index.jpg' id='background'/>
-        <!--
-        <span class="name">
-            Minsik Choi
-        </span>
-        -->
-        <span class="name-explanation">
-            Torno presto
-        </span>
-        <!--
-        <div class="link">
-            <div class="about">
-                <a href="about.html">about</a>
-            </div>
-            <div class="project">
-                <a href="project.html">project</a>
-            </div>
-        </div>
-        -->
+<body>
+
+<nav class="top-bar">
+  <div class="top-bar-left">
+    <button class="search-toggle" id="searchToggle" aria-label="Search">
+      <span class="material-symbols-outlined">search</span>
+    </button>
+  </div>
+  <div class="top-bar-center">
+    <a class="top-bar-home" id="homeLink">Home</a>
+  </div>
+  <div class="top-bar-right">
+    <a class="top-bar-about" id="aboutLink">About</a>
+  </div>
+</nav>
+
+<div class="search-overlay" id="searchOverlay">
+  <button class="search-close" id="searchClose" aria-label="Close"><span class="material-symbols-outlined">close</span></button>
+  <div class="search-input-area"><div class="search-field">
+    <input type="text" id="searchInput" placeholder="Search..." autocomplete="off" spellcheck="false"/>
+    <span class="material-symbols-outlined">search</span>
+  </div></div>
+  <div class="search-results-list" id="searchResults"></div>
+</div>
+
+<!-- ══ HOME ══ -->
+<div id="homePage">
+  <header class="header scroll-fade">
+    <div class="header-inner">
+      <img class="profile-img" src="img/profile.png" alt="Minsik Choi">
+      <div class="header-text">
+        <h1>Minsik Choi</h1>
+        <p class="bio">I use digital technologies as an engine for open and ethical knowledge sharing.</p>
+      </div>
     </div>
-    <!-- footer -->
-    <div class="footer"> <p>Minsik Choi. All rights reserved. 2024</p></div> 
+  </header>
+  <div class="main-container">
+    <div class="filter-banner" id="filterBanner"><span>Showing results for: <strong id="filterKeyword"></strong></span><button id="clearFilter">Show All</button></div>
+    <nav class="categories scroll-fade">
+      <span class="label">Categories</span>
+      <button class="active" data-filter="all">All</button>
+      <button data-filter="work">Work</button>
+      <button data-filter="academic">Academic</button>
+      <button data-filter="independent">Independent</button>
+    </nav>
+    <div class="card-grid" id="cardGrid">
+      <!--content 1-->
+      <article class="card scroll-fade" data-category="work" data-idx="0" data-skills="UI/UX Design, Figma"><div class="card-inner">
+        <div class="card-meta"><span class="card-tag">Work</span></div>
+        <img class="img-placeholder" src="img/1.png" alt="">
+        <h3>UN Human Rights Knowledge Gateway</h3>
+        <div class="card-date">UN Human Rights Office · Sep 2025</div>
+        <p>Designed the landing page based on UN web accessibility and OHCHR branding guildlines.</p>
+        <span class="card-skill-tag">UI/UX Design</span>
+      </div></article>
+      <!--content 2-->
+      <article class="card scroll-fade" data-category="academic" data-idx="1" data-skills="Machine Learning,AI,Deep Learning, Python, Data Visualization, XML"><div class="card-inner">
+        <div class="card-meta"><span class="card-tag">Academic</span></div>
+        <img class="img-placeholder" src="img/2.png" alt="">
+        <h3>Analysing the Role of Pauses in Literary Text using Deep learning and Emotion Analysis</h3>
+        <div class="card-date">Mar 2025</div>
+        <p>A study on how pauses regulate emotional balance in Waiting for Godot using ML model and emotion classification.</p>
+        <span class="card-skill-tag">Machine Learning</span>
+      </div></article>
+      <!--content 3-->
+      <article class="card scroll-fade" data-category="academic" data-idx="2" data-skills="Data Analysis,Data Visualization,Python,Emotion Lexicon,XML"><div class="card-inner">
+        <div class="card-meta"><span class="card-tag">Academic</span></div>
+        <img class="img-placeholder" src="img/3.png" alt="">
+        <h3>The Tempest : A network analysis of character emotions and political dynamics</h3>
+        <div class="card-date">Aug 2024</div>
+        <p>Used Python and XML to map character emotions and relationships through social network analysis.</p>
+        <span class="card-skill-tag">Data Analysis</span>
+      </div></article>
+      <!--content 4-->
+      <article class="card scroll-fade" data-category="academic" data-idx="3" data-skills="Web Development,IIIF,XML"><div class="card-inner">
+        <div class="card-meta"><span class="card-tag">Academic</span></div>
+        <img class="img-placeholder" src="img/4.png" alt="">
+        <h3>Aldo Leopold's Digital Edition</h3>
+        <div class="card-date">Jun 2024</div>
+        <p>Using digital humanities to access an environmental philosopher's notebook. Used IIIF and XML to connect ideas across sources.</p>
+        <span class="card-skill-tag">Web Development</span>
+      </div></article>
+      <!--content 5-->
+      <article class="card scroll-fade" data-category="academic" data-idx="4" data-skills="Data Analysis,Data Visualization,Tableau"><div class="card-inner">
+        <div class="card-meta"><span class="card-tag">Academic</span></div>
+        <img class="img-placeholder" src="img/5.png" alt="">
+        <h3>How does geographical background affect education?</h3>
+        <div class="card-date">Feb 2023</div>
+        <p>Uncovering teaching patterns across three continents. Visualized university data to extract insights into curriculum, authorship, and topic trends.</p>
+        <span class="card-skill-tag">Data Analysis</span>
+      </div></article>
+      <!--content 6-->
+      <article class="card scroll-fade" data-category="academic" data-idx="5" data-skills="UI/UX Design,Figma,WordPress,Video Editing"><div class="card-inner">
+        <div class="card-meta"><span class="card-tag">Academic</span></div>
+        <img class="img-placeholder" src="img/6.png" alt="">
+        <h3>ArtRe : Public Art Re-qualification</h3>
+        <div class="card-date">Jan 2023</div>
+        <p>Developed a WordPress showcasing how public art fosters urban regeneration and social sustainability in Venice's specific district.</p>
+        <span class="card-skill-tag">UI/UX Design</span>
+      </div></article>
+      <!--content 7-->
+      <article class="card scroll-fade" data-category="work" data-idx="6" data-skills="Web Content, WordPress, Communication"><div class="card-inner">
+        <div class="card-meta"><span class="card-tag">Work</span></div>
+        <img class="img-placeholder" src="img/7.png" alt="">
+        <h3>Silent Spring</h3>
+        <div class="card-date">Il Liutaio nel Bazaar · Nov 2022</div>
+        <p>An interactive web article about how Rachel Carson and Silent Spring sparked a paradigm shift between humans and nature in the 1960s.</p>
+        <span class="card-skill-tag">Web Content</span>
+      </div></article>
+      <!--content 8-->
+      <article class="card scroll-fade" data-category="independent" data-idx="7" data-skills="Linked Open Data, Web Development, RDF"><div class="card-inner">
+        <div class="card-meta"><span class="card-tag">Independent</span></div>
+        <img class="img-placeholder" src="img/8.png" alt="">
+        <h3>Arne Naess LOD</h3>
+        <div class="card-date">Jan 2022</div>
+        <p>Mapped an environmental philosopher's life through key places, events, and concepts using LOD, metadata, and RDF.</p>
+        <span class="card-skill-tag">Linked Open Data</span>
+      </div></article>
+      <!--content 9-->
+      <article class="card scroll-fade" data-category="independent" data-idx="8" data-skills="Data Analysis, Data Visualization, D3.js, Web Development"><div class="card-inner">
+        <div class="card-meta"><span class="card-tag">Independent</span></div>
+        <img class="img-placeholder" src="img/9.png" alt="">
+        <h3>i-o-i</h3>
+        <div class="card-date">Feb 2021</div>
+        <p>Analyzed The Ethics of Information by Luciano Floridi using text data to visualize key knowledge concepts and connections.</p>
+        <span class="card-skill-tag">Data Analysis</span>
+      </div></article>
+      <!--content 10-->
+      <article class="card scroll-fade" data-category="independent" data-idx="9" data-skills="Data Analysis,Data Visualization,D3.js,Web Development,Video Editing  "><div class="card-inner">
+        <div class="card-meta"><span class="card-tag">Independent</span></div>
+        <img class="img-placeholder" src="img/10.png" alt="">
+        <h3>An E-day</h3>
+        <div class="card-date">Jan 2021</div>
+        <p>Tracing real-time temperature patterns. Visualized climate data to address the UN's 13th Sustainable Development Goal.</p>
+        <span class="card-skill-tag">Data Analysis</span>
+      </div></article>
+      <div class="no-results" id="noResults">No matching results found.</div>
+    </div>
+  </div>
+</div>
+
+<div id="detailPage">
+
+  <!-- DETAIL 1 -->
+  <div id="detail-page-1" class="detail-section-page">
+    <div class="detail-wrapper"><div class="detail-layout">
+      <img class="detail-image" src="img/1-1.png" alt="">
+      <h2 class="detail-title"></h2>
+      <div class="detail-quote"></div>
+      <div class="detail-body">
+        <p>UN HUMAN RIGHTS Knowledge Gateway is a platform for mutual learning and knowledge sharing. This is a knowledge hub accessing human rights knowledge, including promising, good and innovative practices, to support Members States in implementing international human rights norms, standards and recommendations of international human rights mechanisms.</p>
+        <p>In this project, I designed the UI/UX of the landing page in compliance with UN web accessibility and OHCHR branding guidelines.</p>
+      </div>
+      <div class="detail-links">
+        <a class="detail-link-btn" href="https://knowledgegateway.ohchr.org/" target="_blank"><span class="material-symbols-outlined">language</span>Website</a>
+        <a class="detail-link-btn" href="https://www.figma.com/proto/z8LSQ2u97R5zvKX6jaNsMl/KG_RandingPage?node-id=0-24&p=f&t=0W5Ui6U0K8Lxtgnr-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1" target="_blank"><span class="material-symbols-outlined">palette</span>Prototype</a>
+      </div>
+      <div class="detail-info">
+        <div class="info-row"><div class="info-label"><span class="material-symbols-outlined">grid_view</span>Category</div><div class="info-value">Work</div></div>
+        <div class="info-row"><div class="info-label"><span class="material-symbols-outlined">group</span>Type</div><div class="info-value">Team</div></div>
+        <div class="info-row"><div class="info-label"><span class="material-symbols-outlined">build</span>Technical Skills</div><div class="info-value"><div class="skill-links">
+          <a class="skill-link" href="#">UI/UX Design</a><a class="skill-link" href="#">Figma</a>
+        </div></div></div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- DETAIL 2 -->
+  <div id="detail-page-2" class="detail-section-page">
+    <div class="detail-wrapper"><div class="detail-layout">
+      <img class="detail-image" src="img/2-1.png" alt="">
+      <h2 class="detail-title"></h2>
+      <div class="detail-quote"></div>
+      <div class="detail-body">
+        <p>This is a Master’s thesis for Digital and Public Humanities at Ca’ Foscari University, where I utilized the ELECTRA deep learning model to quantify the emotional and structural role of pauses in Samuel Beckett’s Waiting for Godot.</p>
+        <p>My research established a data-driven methodology to analyze how non-linguistic elements regulate emotional rhythm, at the intersection of computational linguistics and literary theory".</p>
+      </div>
+      <div class="detail-links">
+        <a class="detail-link-btn" href="https://unitesi.unive.it/handle/20.500.14247/24338" target="_blank"><span class="material-symbols-outlined">article</span>Thesis</a>
+      </div>
+      <div class="detail-info">
+        <div class="info-row"><div class="info-label"><span class="material-symbols-outlined">grid_view</span>Category</div><div class="info-value">Academic</div></div>
+        <div class="info-row"><div class="info-label"><span class="material-symbols-outlined">group</span>Type</div><div class="info-value">Individual</div></div>
+        <div class="info-row"><div class="info-label"><span class="material-symbols-outlined">build</span>Technical Skills</div><div class="info-value"><div class="skill-links">
+          <a class="skill-link" href="#">Machine Learning</a><a class="skill-link" href="#">AI</a><a class="skill-link" href="#">Deep Learning</a><a class="skill-link" href="#">Python</a><a class="skill-link" href="#">Data Visualization</a><a class="skill-link" href="#">XML</a>
+        </div></div></div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- DETAIL 3 -->
+  <div id="detail-page-3" class="detail-section-page">
+    <div class="detail-wrapper"><div class="detail-layout">
+      <img class="detail-image" src="img/3-1.png" alt="">
+      <h2 class="detail-title"></h2>
+      <div class="detail-quote"></div>
+      <div class="detail-body">
+        <p>As an academic project for 'An Introduction to Computational Social Science' class, I analyzed Shakespeare’s The Tempest using Python and XML-based text processing.</p>
+        <p>By leveraging emotion lexicons, I visualized complex character relationships and quantified the play’s shifting emotional and political dynamics. This study offered a data-driven perspective on the structural evolution of classical narratives.</p>
+      </div>
+      <div class="detail-links">
+        <a class="detail-link-btn" href="https://github.com/min6choi/tempest/blob/main/Tempest.ipynb" target="_blank"><span class="material-symbols-outlined">code</span>Repository</a>
+      </div>
+      <div class="detail-info">
+        <div class="info-row"><div class="info-label"><span class="material-symbols-outlined">grid_view</span>Category</div><div class="info-value">Academic</div></div>
+        <div class="info-row"><div class="info-label"><span class="material-symbols-outlined">group</span>Type</div><div class="info-value">Individual</div></div>
+        <div class="info-row"><div class="info-label"><span class="material-symbols-outlined">build</span>Technical Skills</div><div class="info-value"><div class="skill-links">
+          <a class="skill-link" href="#">Data Analysis</a><a class="skill-link" href="#">Data Visualization</a><a class="skill-link" href="#">Python</a><a class="skill-link" href="#">Emotion Lexicon</a><a class="skill-link" href="#">XML</a>
+        </div></div></div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- DETAIL 4 -->
+  <div id="detail-page-4" class="detail-section-page">
+    <div class="detail-wrapper"><div class="detail-layout">
+      <img class="detail-image" src="img/4-1.png" alt="">
+      <h2 class="detail-title"></h2>
+      <div class="detail-quote"></div>
+      <div class="detail-body">
+        <p>As an academic project for 'Modelling and Visualizing Textual Data' class, I developed a digital scholarly edition of Aldo Leopold’s notebooks by implementing IIIF and XML.</p>
+        <p>In this project, I transformed archival manuscripts into an interactive platform, offering a sophisticated way to navigate and visualize complex textual relationships.</p>
+      </div>
+      <div class="detail-links">
+        <a class="detail-link-btn" href="https://minsikchoi.com/alde/" target="_blank"><span class="material-symbols-outlined">language</span>Website</a>
+        <a class="detail-link-btn" href="https://github.com/min6choi/alde" target="_blank"><span class="material-symbols-outlined">code</span>Repository</a>
+      </div>
+      <div class="detail-info">
+        <div class="info-row"><div class="info-label"><span class="material-symbols-outlined">grid_view</span>Category</div><div class="info-value">Academic</div></div>
+        <div class="info-row"><div class="info-label"><span class="material-symbols-outlined">group</span>Type</div><div class="info-value">Individual</div></div>
+        <div class="info-row"><div class="info-label"><span class="material-symbols-outlined">build</span>Technical Skills</div><div class="info-value"><div class="skill-links">
+          <a class="skill-link" href="#">Web Development</a><a class="skill-link" href="#">IIIF</a><a class="skill-link" href="#">XML</a>
+        </div></div></div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- DETAIL 5 -->
+  <div id="detail-page-5" class="detail-section-page">
+    <div class="detail-wrapper"><div class="detail-layout">
+      <img class="detail-image" src="img/5-1.png" alt="">
+      <h2 class="detail-title"></h2>
+      <div class="detail-quote"></div>
+      <div class="detail-body">
+        <p>As an academic project for 'Information Visualization, Data Science, and Social Media Analytics' class, I investigated how geographical background influences global education by analyzing university data from New York, Seoul, and Venice (2016–2022).</p>
+        <p>With Tableau, I visualized complex teaching patterns to extract quantitative insights into curriculum composition, authorship demographics, and shifting topic trends across three continents. This study uncovered the hidden relationship between regional contexts and academic focus, providing a data-driven narrative on the Geographical features in higher education.</p>
+      </div>
+      <div class="detail-links">
+        <a class="detail-link-btn" href="https://public.tableau.com/app/profile/minsik.choi3807/vizzes" target="_blank"><span class="material-symbols-outlined">stacked_bar_chart</span>Tableau</a>
+        <a class="detail-link-btn" href="https://drive.google.com/file/d/1A1iGOecptRuV6ujt7r4kYoJG-Cs_1dye/view" target="_blank"><span class="material-symbols-outlined">article</span>Report</a>
+      </div>
+      <div class="detail-info">
+        <div class="info-row"><div class="info-label"><span class="material-symbols-outlined">grid_view</span>Category</div><div class="info-value">Academic</div></div>
+        <div class="info-row"><div class="info-label"><span class="material-symbols-outlined">group</span>Type</div><div class="info-value">Individual</div></div>
+        <div class="info-row"><div class="info-label"><span class="material-symbols-outlined">build</span>Technical Skills</div><div class="info-value"><div class="skill-links">
+          <a class="skill-link" href="#">Data Analysis</a><a class="skill-link" href="#">Data Visualization</a><a class="skill-link" href="#">Tableau</a>
+        </div></div></div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- DETAIL 6 -->
+  <div id="detail-page-6" class="detail-section-page">
+    <div class="detail-wrapper"><div class="detail-layout">
+      <img class="detail-image" src="img/6-1.png" alt="">
+      <h2 class="detail-title"></h2>
+      <div class="detail-quote"></div>
+      <div class="detail-body">
+        <p>As an academic team project for 'Web and User Experience Design'class,  we developed "ArtRe," a WordPress-based platform dedicated to public art re-qualification in Venice. </p>
+        <p>In this team project, we showcased how public artistic interventions foster urban regeneration and social sustainability. I took part in Video (recording, editing), WordPress Page Layout (about, location, contact), UI/UX design.</p>
+      </div>
+      <div class="detail-links">
+        <a class="detail-link-btn" href="https://artre.altervista.org/" target="_blank"><span class="material-symbols-outlined">language</span>WordPress</a>
+        <a class="detail-link-btn" href="https://www.instagram.com/reel/Cn-PhvUNH8m/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank"><span class="material-symbols-outlined">video_library</span>Video</a>
+      </div>
+      <div class="detail-info">
+        <div class="info-row"><div class="info-label"><span class="material-symbols-outlined">grid_view</span>Category</div><div class="info-value">Academic</div></div>
+        <div class="info-row"><div class="info-label"><span class="material-symbols-outlined">group</span>Type</div><div class="info-value">Team</div></div>
+        <div class="info-row"><div class="info-label"><span class="material-symbols-outlined">build</span>Technical Skills</div><div class="info-value"><div class="skill-links">
+          <a class="skill-link" href="#">UI/UX Design</a><a class="skill-link" href="#">Figma</a><a class="skill-link" href="#">WordPress</a><a class="skill-link" href="#">Video Editing</a>
+        </div></div></div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- DETAIL 7 -->
+  <div id="detail-page-7" class="detail-section-page">
+    <div class="detail-wrapper"><div class="detail-layout">
+      <img class="detail-image" src="img/7-1.png" alt="">
+      <h2 class="detail-title"></h2>
+      <div class="detail-quote"></div>
+      <div class="detail-body">
+        <p>'Il Liutaio nel Bazaar' is a digital public history project run by Ca'foscari University, aimed at producing and publishing historical content for online audiences.</p>
+        <p>In this project, I worked on an interactive web article about Rachel Carson, who contributed to the emergence of environmental multilateralism as a female scientist. Even though the Official Website is currently being renovated, I built my personal WordPress site to re-upload my article.</p>
+      </div>
+      <div class="detail-links">
+        <a class="detail-link-btn" href="https://choiminsik.altervista.org/" target="_blank"><span class="material-symbols-outlined">language</span>WordPress</a>
+        <a class="detail-link-btn" href="https://www.instagram.com/p/Ck_IoMKME3K/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==" target="_blank"><span class="material-symbols-outlined">link</span>Social Media</a>
+      </div>
+      <div class="detail-info">
+        <div class="info-row"><div class="info-label"><span class="material-symbols-outlined">grid_view</span>Category</div><div class="info-value">Work</div></div>
+        <div class="info-row"><div class="info-label"><span class="material-symbols-outlined">group</span>Type</div><div class="info-value">Individual</div></div>
+        <div class="info-row"><div class="info-label"><span class="material-symbols-outlined">build</span>Technical Skills</div><div class="info-value"><div class="skill-links">
+          <a class="skill-link" href="#">Web Content</a><a class="skill-link" href="#">WordPress</a><a class="skill-link" href="#">Communication</a>
+        </div></div></div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- DETAIL 8 -->
+  <div id="detail-page-8" class="detail-section-page">
+    <div class="detail-wrapper"><div class="detail-layout">
+      <img class="detail-image" src="img/8-1.png" alt="">
+      <h2 class="detail-title"></h2>
+      <div class="detail-quote"></div>
+      <div class="detail-body">
+        <p>As a personal research project, I designed and implemented a Linked Open Data (LOD) model to map environmental philosopher Arne Naess’s life through key locations, events, and concepts. </p>
+        <p>By integrating RDF and metadata schema design with E/R modelling, I structured complex biographical data into a navigable digital network.</p>
+      </div>
+      <div class="detail-links">
+        <a class="detail-link-btn" href="https://minsikchoi.com/arnenaesslod/" target="_blank"><span class="material-symbols-outlined">language</span>Website</a>
+      </div>
+      <div class="detail-info">
+        <div class="info-row"><div class="info-label"><span class="material-symbols-outlined">grid_view</span>Category</div><div class="info-value">Independent</div></div>
+        <div class="info-row"><div class="info-label"><span class="material-symbols-outlined">group</span>Type</div><div class="info-value">Individual</div></div>
+        <div class="info-row"><div class="info-label"><span class="material-symbols-outlined">build</span>Technical Skills</div><div class="info-value"><div class="skill-links">
+          <a class="skill-link" href="#">Linked Open Data</a><a class="skill-link" href="#">Web Development</a><a class="skill-link" href="#">RDF</a>
+        </div></div></div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- DETAIL 9 -->
+  <div id="detail-page-9" class="detail-section-page">
+    <div class="detail-wrapper"><div class="detail-layout">
+      <img class="detail-image" src="img/9-1.png" alt="">
+      <h2 class="detail-title"></h2>
+      <div class="detail-quote"></div>
+      <div class="detail-body">
+        <p>As an independent team project, we computationally analyzed Luciano Floridi's The Ethics of Information by mapping conceptual networks using TextRank and Louvain algorithms.</p>
+        <p>I utilized D3.js to visualize node relationships based on frequency and community, implementing an interactive interface to explore the contextual meaning of key philosophical terms.</p>
+      </div>
+      <div class="detail-links">
+        <a class="detail-link-btn" href="https://minsikchoi.com/i-e-i/" target="_blank"><span class="material-symbols-outlined">language</span>Website</a>
+        <a class="detail-link-btn" href="https://github.com/min6choi/i-e-i" target="_blank"><span class="material-symbols-outlined">code</span>Repository</a>
+      </div>
+      <div class="detail-info">
+        <div class="info-row"><div class="info-label"><span class="material-symbols-outlined">grid_view</span>Category</div><div class="info-value">Independent</div></div>
+        <div class="info-row"><div class="info-label"><span class="material-symbols-outlined">group</span>Type</div><div class="info-value">Team</div></div>
+        <div class="info-row"><div class="info-label"><span class="material-symbols-outlined">build</span>Technical Skills</div><div class="info-value"><div class="skill-links">
+          <a class="skill-link" href="#">Data Analysis</a><a class="skill-link" href="#">Data Visualization</a><a class="skill-link" href="#">D3.js</a><a class="skill-link" href="#">Web Development</a>
+        </div></div></div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- DETAIL 10 -->
+  <div id="detail-page-10" class="detail-section-page">
+    <div class="detail-wrapper"><div class="detail-layout">
+      <img class="detail-image" src="img/10-1.png" alt="">
+      <h2 class="detail-title"></h2>
+      <div class="detail-quote"></div>
+      <div class="detail-body">
+        <p>As a team project for the 'DSC Korea Solution Challenge 2021,' we developed 'E-day' to address UN Sustainable Development Goal 13 (Climate Action) through real-time data visualization. The project was structured to transform abstract climate data into intuitive visual insights, utilizing a specialized technical stack to bridge the gap between scientific data and public awareness.</p>
+        <p>Just as visual charts made the invisible COVID-19 virus understandable, I leveraged D3.js and frontend technologies to visualize rising temperatures and greenhouse gases, providing intuitive data-driven insights to persuade the public on the urgency of climate protection.
+</p>
+      </div>
+      <div class="detail-links">
+        <a class="detail-link-btn" href="https://dsckr-tmit.github.io/tmit21/" target="_blank"><span class="material-symbols-outlined">language</span>Website</a>
+        <a class="detail-link-btn" href="https://drive.google.com/file/d/1tWCUB8oTaKvIunHm8BeeYxbwu7bhk1Me/view?usp=sharing" target="_blank"><span class="material-symbols-outlined">video_library</span>Video</a>
+      </div>
+      <div class="detail-info">
+        <div class="info-row"><div class="info-label"><span class="material-symbols-outlined">grid_view</span>Category</div><div class="info-value">Independent</div></div>
+        <div class="info-row"><div class="info-label"><span class="material-symbols-outlined">group</span>Type</div><div class="info-value">Team</div></div>
+        <div class="info-row"><div class="info-label"><span class="material-symbols-outlined">build</span>Technical Skills</div><div class="info-value"><div class="skill-links">
+          <a class="skill-link" href="#">Data Analysis</a><a class="skill-link" href="#">Data Visualization</a><a class="skill-link" href="#">D3.js</a><a class="skill-link" href="#">Web Development</a><a class="skill-link" href="#">Video Editing </a>
+        </div></div></div>
+      </div>
+    </div></div>
+  </div>
+
+</div><!-- /#detailPage -->
+
+<!-- ══ SKILL PAGE ══ -->
+<div id="skillPage">
+  <div class="skill-header">
+    <h1 id="skillTitle"></h1>
+    <p id="skillSubtitle"></p>
+  </div>
+  <div class="skill-grid" id="skillGrid"></div>
+</div>
+
+<!-- ══ ABOUT PAGE ══ -->
+<div id="aboutPage">
+  <div class="about-wrapper">
+    <div class="about-header">
+      <img class="about-profile-img" src="img/profile.png" alt="Minsik Choi">
+      <div class="about-header-text">
+        <h2>Minsik Choi</h2>
+        <p>I spend most of my time in mountains, libraries and lakes, creating my digital archives of these moments.</p>
+      </div>
+    </div>
+    <hr class="about-divider">
+
+    <div class="cv-meta-links">
+      <a href="https://www.linkedin.com/in/minsik617/" target="_blank">LinkedIn ↗</a>
+      <a href="#" target="_blank">Resume ↗</a>
+    </div>
+
+    <div class="cv-section">
+      <div class="cv-section-title">Experience</div>
+      <div class="cv-item">
+        <div class="cv-item-date">Apr 2025 — Sep 2025<span class="cv-item-org">UN Human Rights Office</span></div>
+        <div class="cv-item-content">
+          <div class="cv-item-title"></div>
+          <div class="cv-item-sub">Contributed to the digital transformation of library systems by implementing automation workflow and conducting a analysis for an AI-assisted topic indexing tool. Designed the Knowledge Gateway UI/UX with user-centric, accessibility-compliant design.</div>
+        </div>
+      </div>
+      <div class="cv-item">
+        <div class="cv-item-date">Jul 2024 — Aug 2024<span class="cv-item-org">Beckett Digital Manuscript Project</span></div>
+        <div class="cv-item-content">
+          <div class="cv-item-title"></div>
+          <div class="cv-item-sub">Assisted with digital archiving by structuralizing multilingual manuscript data through layout analysis and XML-based text integration. Enhanced research accessibility by categorizing elements through standardized metadata tagging.</div>
+        </div>
+      </div>
+      <div class="cv-item">
+        <div class="cv-item-date">Sep 2022 — Oct 2022<span class="cv-item-org">Il Liutaio Nel Bazaar</span></div>
+        <div class="cv-item-content">
+          <div class="cv-item-title"></div>
+          <div class="cv-item-sub">Wrote an academic essay and reformatted it as digital knowledge-sharing content with multimedia and data visualization for publishing WordPress.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cv-section">
+      <div class="cv-section-title">Education</div>
+      <div class="cv-item">
+        <div class="cv-item-date">2023 — 2025<span class="cv-item-org">Ca'Foscari University</span></div>
+        <div class="cv-item-content">
+          <div class="cv-item-title"></div>
+          <div class="cv-item-sub">M.A. Digital and Public Humanities <br/>110/110 cum laude
+          </div>
+        </div>
+      </div>
+      <div class="cv-item">
+        <div class="cv-item-date">2017 — 2022<span class="cv-item-org">University of Seoul</span></div>
+        <div class="cv-item-content">
+          <div class="cv-item-title"></div>
+          <div class="cv-item-sub">B.A. Philosophy</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cv-section">
+      <div class="cv-section-title">Skills</div>
+      <div class="cv-skills-list">
+        <span class="cv-skill-chip">Machine Learning</span>
+        <span class="cv-skill-chip">Data Analysis</span>
+        <span class="cv-skill-chip">UI/UX Design</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <span class="site-footer-copy">© 2025 Minsik Choi</span>
+    <div class="site-footer-icons">
+      <a href="https://www.linkedin.com/in/minsik617/" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://www.instagram.com/min6choi/" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://mail.google.com/mail/?view=cm&to=minsik617@gmail.com"         
+      target="_blank" aria-label="Email">
+      <span class="material-symbols-outlined" style="font-size:22px;">mail</span>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const imgClasses = ['img/1.png','img/2.png','img/3.png','img/4.png','img/5.png','img/6.png','img/7.png','img/8.png','img/9.png','img/10.png'];
+
+// ── PAGE NAVIGATION WITH HISTORY API ──
+const homePage = document.getElementById('homePage');
+const detailPage = document.getElementById('detailPage');
+const skillPage = document.getElementById('skillPage');
+const aboutPage = document.getElementById('aboutPage');
+const homeLink = document.getElementById('homeLink');
+const aboutLink = document.getElementById('aboutLink');
+
+function hideAll() {
+  homePage.style.display = 'none';
+  detailPage.style.display = 'none';
+  skillPage.style.display = 'none';
+  aboutPage.style.display = 'none';
+  aboutLink.classList.remove('active');
+}
+
+function showHome(pushState) {
+  hideAll();
+  homePage.style.display = '';
+  homeLink.style.display = 'none';
+  if (pushState !== false) history.pushState({page:'home'}, '', '#');
+}
+
+function showAbout(pushState) {
+  hideAll();
+  aboutPage.style.display = 'block';
+  homeLink.style.display = 'block';
+  aboutLink.classList.add('active');
+  window.scrollTo(0, 0);
+  if (pushState !== false) history.pushState({page:'about'}, '', '#about');
+}
+
+function showDetail(idx, pushState) {
+  document.querySelectorAll('.detail-section-page').forEach(s => s.style.display = 'none');
+  const target = document.getElementById('detail-page-' + (idx + 1));
+  hideAll();
+  if (target) {
+    // Sync title and date from card — edit only the card to update both places
+    const card = document.querySelector('.card[data-idx="' + idx + '"]');
+    if (card) {
+      const t = target.querySelector('.detail-title');
+      const q = target.querySelector('.detail-quote');
+      if (t) t.textContent = card.querySelector('h3').textContent;
+      if (q) q.textContent = card.querySelector('.card-date').textContent;
+    }
+    target.style.display = 'block';
+  }
+  detailPage.style.display = 'block';
+  homeLink.style.display = 'block';
+  window.scrollTo(0, 0);
+  if (pushState !== false) history.pushState({page:'detail',idx}, '', '#detail-'+idx);
+}
+
+function showSkillPage(skillName, pushState) {
+  document.getElementById('skillTitle').textContent = skillName;
+  document.getElementById('skillSubtitle').textContent = 'Projects featuring this skill';
+
+  const grid = document.getElementById('skillGrid');
+  grid.innerHTML = '';
+
+  document.querySelectorAll('.card').forEach((card, idx) => {
+    const skills = (card.dataset.skills || '').split(',').map(s => s.trim());
+    if (!skills.includes(skillName)) return;
+    const title = card.querySelector('h3').textContent;
+    const desc = card.querySelector('p').textContent;
+    const date = card.querySelector('.card-date').textContent;
+    const tag = card.dataset.category;
+
+    const el = document.createElement('div');
+    el.className = 'skill-card';
+    el.innerHTML = `<div class="skill-card-inner">
+      <div class="sk-meta"><span class="sk-tag">${tag}</span></div>
+      <img class="sk-img" src="${imgClasses[idx]}" alt="${title}">
+      <h3>${title}</h3>
+      <div class="sk-date">${date}</div>
+      <p>${desc}</p>
+      <span class="card-skill-tag">${skills[0]}</span>
+    </div>`;
+    el.addEventListener('click', () => showDetail(idx));
+    grid.appendChild(el);
+  });
+
+  hideAll();
+  skillPage.style.display = 'block';
+  homeLink.style.display = 'block';
+  window.scrollTo(0, 0);
+  if (pushState !== false) history.pushState({page:'skill',skill:skillName}, '', '#skill-'+encodeURIComponent(skillName));
+}
+
+// Browser back/forward
+window.addEventListener('popstate', (e) => {
+  const state = e.state;
+  if (!state || state.page === 'home') { showHome(false); }
+  else if (state.page === 'detail') { showDetail(state.idx, false); }
+  else if (state.page === 'skill') { showSkillPage(state.skill, false); }
+  else if (state.page === 'about') { showAbout(false); }
+});
+
+// Initial state
+history.replaceState({page:'home'}, '', '#');
+
+homeLink.addEventListener('click', (e) => { e.preventDefault(); showHome(); });
+aboutLink.addEventListener('click', (e) => { e.preventDefault(); showAbout(); });
+
+// Skill links inside detail pages — event delegation
+document.addEventListener('click', (e) => {
+  const link = e.target.closest('#detailPage .skill-link');
+  if (link) { e.preventDefault(); e.stopPropagation(); showSkillPage(link.textContent.trim()); }
+});
+
+document.querySelectorAll('.card').forEach(card => {
+  card.addEventListener('click', (e) => { e.preventDefault(); showDetail(parseInt(card.dataset.idx)); });
+});
+
+// Card skill tags → navigate to skill page
+document.querySelectorAll('.card .card-skill-tag').forEach(tag => {
+  tag.style.cursor = 'pointer';
+  tag.addEventListener('click', (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    showSkillPage(tag.textContent.trim());
+  });
+});
+
+
+// ── Category Filter ──
+(function() {
+  const buttons = document.querySelectorAll('.categories button');
+  const cards = document.querySelectorAll('.card');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      clearSearchFilter();
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      cards.forEach(card => { card.style.display = (f==='all'||card.dataset.category===f)?'':'none'; });
+    });
+  });
+})();
+
+// ── Search Filter ──
+const allCards = document.querySelectorAll('.card');
+const filterBanner = document.getElementById('filterBanner');
+const filterKeyword = document.getElementById('filterKeyword');
+const clearFilterBtn = document.getElementById('clearFilter');
+
+function applySearchFilter(q, idx) {
+  allCards.forEach((c,i) => { c.style.display = idx.includes(i)?'':'none'; });
+  filterKeyword.textContent = q;
+  filterBanner.classList.add('visible');
+  document.querySelectorAll('.categories button').forEach(b => b.classList.remove('active'));
+}
+function clearSearchFilter() {
+  allCards.forEach(c => { c.style.display=''; });
+  filterBanner.classList.remove('visible');
+  const a = document.querySelector('.categories button[data-filter="all"]');
+  if(a){document.querySelectorAll('.categories button').forEach(b=>b.classList.remove('active'));a.classList.add('active');}
+}
+clearFilterBtn.addEventListener('click', clearSearchFilter);
+
+// ── Fullscreen Search ──
+(function() {
+  const toggle=document.getElementById('searchToggle'), overlay=document.getElementById('searchOverlay'),
+    closeBtn=document.getElementById('searchClose'), input=document.getElementById('searchInput'),
+    res=document.getElementById('searchResults');
+  const cards=document.querySelectorAll('.card'), cd=[];
+  cards.forEach((c,i)=>{
+    const t=c.querySelector('h3').textContent,
+      d=c.querySelector('p').textContent,
+      cat=c.dataset.category,
+      dt=c.querySelector('.card-date').textContent,
+      skills=(c.dataset.skills||'').split(',').map(s=>s.trim()).filter(Boolean);
+    const detailEl=document.getElementById('detail-page-'+(i+1));
+    const detailBody=detailEl?Array.from(detailEl.querySelectorAll('.detail-body p')).map(p=>p.textContent).join(' '):'';
+    cd.push({title:t,desc:d,category:cat,date:dt,idx:i,skills,detailBody});
+  });
+  function open(){overlay.classList.add('open');document.body.style.overflow='hidden';setTimeout(()=>input.focus(),250);}
+  function close(){overlay.classList.remove('open');document.body.style.overflow='';input.value='';res.innerHTML='';}
+  function cap(s){return s.charAt(0).toUpperCase()+s.slice(1);}
+  function doSearch(){const raw=input.value.trim(),q=raw.toLowerCase();res.innerHTML='';if(!q)return;
+    const m=cd.filter(d=>d.title.toLowerCase().includes(q)||d.desc.toLowerCase().includes(q)||d.skills.some(s=>s.toLowerCase().includes(q))||d.detailBody.toLowerCase().includes(q));
+    if(!m.length){res.innerHTML='<div class="search-no-results">No matching results.</div>';return;}
+    m.forEach(mm=>{const it=document.createElement('div');it.className='search-result-item';
+      it.innerHTML=`<div class="search-result-title">${mm.title}</div><div class="search-result-meta">${cap(mm.category)} · ${mm.date}</div>`;
+      it.addEventListener('click',()=>{close();showDetail(mm.idx);});
+      res.appendChild(it);});
+  }
+  input.addEventListener('input',doSearch);
+  toggle.addEventListener('click',()=>{overlay.classList.contains('open')?close():open();});
+  closeBtn.addEventListener('click',close);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&overlay.classList.contains('open'))close();});
+})();
+</script>
 </body>
 </html>
