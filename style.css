@@ -184,7 +184,7 @@ body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg); c
 /* ── SKILL PAGE ── */
 #skillPage { display:none; padding-top:52px; animation:fadeIn .4s ease; }
 .skill-header { text-align:center; padding:80px 20px 40px; }
-.skill-header h1 { font-family:'Playfair Display',serif; font-size:2.6rem; font-weight:700; letter-spacing:.02em; color:var(--text-primary); margin-bottom:12px; }
+.skill-header h1 { font-family:'IM Fell French Canon',serif; font-size:2.6rem; font-weight:700; letter-spacing:.02em; color:var(--text-primary); margin-bottom:12px; }
 .skill-header p { font-family:'Caveat',cursive; font-size:1.1rem; color:var(--text-muted); }
 .skill-grid { max-width:1010px; margin:0 auto; padding:0 20px 80px; display:grid; grid-template-columns:repeat(3,1fr); gap:0; border-left:1px solid var(--border); border-top:1px solid var(--border); }
 .skill-card { border-right:1px solid var(--border); border-bottom:1px solid var(--border); padding:20px; cursor:pointer; overflow:hidden; background:transparent; }
