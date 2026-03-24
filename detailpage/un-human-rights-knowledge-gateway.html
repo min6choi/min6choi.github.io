@@ -18,7 +18,11 @@ gtag('config', 'G-LKPBB44DEF');
 <body>
 
 <nav class="top-bar">
-  <div class="top-bar-left"></div>
+  <div class="top-bar-left">
+    <button class="search-toggle" id="searchToggle" aria-label="Search">
+      <span class="material-symbols-outlined">search</span>
+    </button>
+  </div>
   <div class="top-bar-center">
     <a class="top-bar-home" href="../index.html" style="display:block">Home</a>
   </div>
@@ -26,6 +30,15 @@ gtag('config', 'G-LKPBB44DEF');
     <a class="top-bar-about" href="../about.html">About</a>
   </div>
 </nav>
+
+<div class="search-overlay" id="searchOverlay">
+  <button class="search-close" id="searchClose" aria-label="Close"><span class="material-symbols-outlined">close</span></button>
+  <div class="search-input-area"><div class="search-field">
+    <input type="text" id="searchInput" placeholder="Search..." autocomplete="off" spellcheck="false"/>
+    <span class="material-symbols-outlined">search</span>
+  </div></div>
+  <div class="search-results-list" id="searchResults"></div>
+</div>
 
 <div style="padding-top:52px;">
   <div style="animation:fadeIn .4s ease;">
@@ -63,6 +76,7 @@ gtag('config', 'G-LKPBB44DEF');
   </div>
 </footer>
 
+<script src="detail-search.js"></script>
 <script>
 document.querySelectorAll('.skill-link').forEach(link => {
   link.addEventListener('click', (e) => {
