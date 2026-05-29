@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Minsik Choi</title>
+<script>
+  // SPA fallback for static hosts (e.g. GitHub Pages): remember the requested
+  // path, then bounce to the app root so React Router can render it.
+  sessionStorage.setItem('spa_redirect', location.pathname + location.search + location.hash);
+  location.replace('/');
+</script>
+</head>
+<body></body>
+</html>
